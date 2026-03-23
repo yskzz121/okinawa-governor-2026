@@ -344,10 +344,36 @@
   }
 
   /* ── RESPONSIVE ── */
+  .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   @media (max-width: 768px) {
     .grid-3, .grid-2, .insight-grid { grid-template-columns: 1fr; }
     .header { padding: 24px 20px 20px; }
-    .container { padding: 20px 16px 48px; }
+    .header h1 { font-size: 22px; }
+    .container { padding: 20px 12px 48px; }
+    .chart-container { padding: 16px 10px; }
+    table { font-size: 12px; min-width: 600px; }
+    th, td { padding: 8px 8px; white-space: nowrap; }
+    .age-row { grid-template-columns: 50px 1fr 44px; gap: 6px; }
+    .age-label { font-size: 11px; }
+    .section-title { font-size: 12px; letter-spacing: 2px; }
+    .kpi-val { font-size: 18px; }
+    .card { padding: 16px; }
+    .card-year { font-size: 22px; }
+    .cand-name { font-size: 12px; min-width: 60px; }
+    .cand-votes { font-size: 11px; min-width: 70px; }
+    .cand-bar { font-size: 10px; }
+    .margin-box { font-size: 11px; flex-wrap: wrap; gap: 4px; }
+    .footnote { font-size: 10px; }
+    .insight-num { font-size: 28px; }
+    .insight-title { font-size: 13px; }
+    .insight-body { font-size: 11px; }
+    .strategy-num { font-size: 36px; }
+    .strategy-title { font-size: 15px; }
+    .strategy-body { font-size: 12px; }
+    .highlight-box { padding: 16px; font-size: 12px; }
+  }
+  @media (max-width: 480px) {
+    table { min-width: 520px; }
   }
 </style>
 <style id="pw-gate-css">
@@ -527,6 +553,7 @@
 
     <div class="chart-container">
       <div class="chart-title">投票率・有権者数・実投票数 の推移</div>
+<div class="table-scroll">
       <table>
         <thead>
           <tr>
@@ -573,6 +600,7 @@
           </tr>
         </tbody>
       </table>
+</div>
       <p class="footnote" style="margin-top:12px">※2014年保守票＝仲井眞（261,076）のみ計上。2022年には下地53,673票が存在（保守分裂票として一部重複）</p>
     </div>
 
@@ -609,6 +637,7 @@
 
     <div class="chart-container">
       <div class="chart-title">知事選 年代別投票率の推移（3回比較）</div>
+<div class="table-scroll">
       <table>
         <thead>
           <tr>
@@ -687,6 +716,7 @@
           </tr>
         </tbody>
       </table>
+</div>
       <p class="footnote">※沖縄県選管の抽出調査（全市町村対象）。2022年は北谷町選管データ（全体投票率60.56%）も参照</p>
     </div>
 
@@ -746,6 +776,7 @@
 
     <div class="chart-container">
       <div class="chart-title">支持政党別 得票率（2022年 出口調査・報道機関推計）</div>
+<div class="table-scroll">
       <table>
         <thead>
           <tr>
@@ -794,12 +825,14 @@
           </tr>
         </tbody>
       </table>
+</div>
       <p class="footnote">※各社出口調査・報道機関推計を総合した概算値</p>
     </div>
 
     <!-- 年代別支持傾向 -->
     <div class="chart-container">
       <div class="chart-title">年代別 支持傾向（2022年）</div>
+<div class="table-scroll">
       <table>
         <thead>
           <tr>
@@ -842,6 +875,7 @@
           </tr>
         </tbody>
       </table>
+</div>
     </div>
   </div>
 
@@ -859,6 +893,7 @@
 
     <div class="chart-container">
       <div class="chart-title">票の獲得構造分解（2022年 佐喜真陣営を出発点に）</div>
+<div class="table-scroll">
       <table>
         <thead>
           <tr>
@@ -907,6 +942,7 @@
           </tr>
         </tbody>
       </table>
+</div>
     </div>
   </div>
 
@@ -917,6 +953,7 @@
     <div class="grid-2">
       <div class="chart-container" style="margin-bottom:0">
         <div class="chart-title">棄権者の規模推計</div>
+<div class="table-scroll">
         <table>
           <thead><tr><th>選挙年</th><th>棄権者数（推計）</th><th>前回比</th></tr></thead>
           <tbody>
@@ -925,6 +962,7 @@
             <tr><td>2022年</td><td><strong style="color:var(--accent)">490,391人</strong></td><td><span class="delta-neg">+68,884人増</span></td></tr>
           </tbody>
         </table>
+</div>
         <p class="footnote" style="margin-top:10px">2022年の棄権者数は <strong style="color:var(--accent)">49万人</strong>。<br>玉城の得票（34万票）を大きく上回る。</p>
       </div>
 
