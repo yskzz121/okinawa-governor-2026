@@ -350,8 +350,21 @@
     .container { padding: 20px 16px 48px; }
   }
 </style>
+<style id="pw-gate-css">
+#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#0a0c14;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
+#pw-overlay .pw-box{text-align:center;max-width:380px;width:100%;padding:24px}
+#pw-overlay h2{color:#e8eaf0;font-size:1.4rem;margin-bottom:6px}
+#pw-overlay .pw-sub{color:#8890a8;font-size:13px;margin-bottom:28px}
+#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #252a3d;background:#111420;color:#e8eaf0;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
+#pw-overlay input:focus{border-color:#4a90d9}
+#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#e63946;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
+#pw-overlay button:hover{background:#c1121f}
+#pw-overlay .pw-err{color:#e63946;font-size:13px;margin-top:8px;display:none}
+#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#4a90d9;font-size:12px;text-decoration:none}
+</style>
 </head>
 <body>
+<div id="pw-overlay"><div class="pw-box"><h2>パスワード認証</h2><div class="pw-sub">閲覧にはパスワードが必要です</div><form onsubmit="return pwCheck()"><input type="password" id="pw-field" placeholder="パスワードを入力" autofocus><button type="submit">認証</button></form><div class="pw-err" id="pw-err">パスワードが正しくありません</div><a class="pw-back" href="index.html">← 一覧に戻る</a></div></div>
 
 <!-- HEADER -->
 <div class="header">
@@ -1073,5 +1086,11 @@
   </p>
 
 </div><!-- /container -->
+<script>
+var PW_HASH="0f741576ac812cab54af2138b9633930a373028830bf72cd3ded6af3d7b1e2eb";
+async function pwSha(s){var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}
+async function pwCheck(){var h=await pwSha(document.getElementById("pw-field").value);if(h===PW_HASH){sessionStorage.setItem("okinawa2026_auth","1");document.getElementById("pw-overlay").remove()}else{document.getElementById("pw-err").style.display="block"}return false}
+(function(){if(sessionStorage.getItem("okinawa2026_auth")==="1"){var o=document.getElementById("pw-overlay");if(o)o.remove()}})();
+</script>
 </body>
 </html>
