@@ -9,22 +9,22 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{
-  --bg:#f5f0e8;
-  --surface:#fffdf8;
-  --surface2:#f0ebe0;
-  --border:#d6cfc0;
-  --border2:#c0b8a8;
-  --ink:#1a1510;
-  --ink2:#3d3628;
-  --ink3:#6b5f4e;
-  --ink4:#9a8f7e;
-  --red:#b5271a;
-  --red2:#d94030;
-  --blue:#1a4a8a;
-  --blue2:#2563a0;
-  --gold:#9a7a28;
-  --gold2:#c4a040;
-  --green:#1a6b4a;
+  --bg:#12100e;
+  --surface:#1c1a16;
+  --surface2:#262420;
+  --border:#3a352c;
+  --border2:#4a4538;
+  --ink:#e8e0d4;
+  --ink2:#c4baa8;
+  --ink3:#8a8070;
+  --ink4:#6a6050;
+  --red:#c84030;
+  --red2:#e05040;
+  --blue:#5a8aba;
+  --blue2:#7aaad4;
+  --gold:#b89830;
+  --gold2:#d4b44c;
+  --green:#4a9a6a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:'Noto Serif JP','Shippori Mincho',serif;font-size:14px;line-height:1.9;padding:20px}
@@ -32,35 +32,35 @@ body{background:var(--bg);color:var(--ink);font-family:'Noto Serif JP','Shippori
 
 /* Header */
 .header{
-  background:var(--ink);
-  color:#f5f0e8;
+  background:var(--surface);
+  color:var(--ink);
   padding:48px 56px 40px;
   position:relative;
   overflow:hidden;
-  border-bottom:4px solid var(--red);
+  border-bottom:4px solid var(--gold);
 }
 .header::before{
   content:'';position:absolute;top:0;right:0;
   width:200px;height:100%;
-  background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(255,255,255,0.03) 8px,rgba(255,255,255,0.03) 16px);
+  background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(255,255,255,0.02) 8px,rgba(255,255,255,0.02) 16px);
   pointer-events:none;
 }
 .header-content{position:relative;z-index:1}
-.confidential-badge{display:inline-block;background:rgba(181,39,26,0.15);border:1px solid rgba(181,39,26,0.5);border-radius:6px;padding:4px 16px;font-size:12px;color:#d94030;letter-spacing:2px;margin-bottom:16px;font-weight:700;font-family:'Noto Sans JP',sans-serif}
-.header h1{font-family:'Shippori Mincho',serif;font-size:2.2em;font-weight:900;margin-bottom:8px;letter-spacing:2px;color:#f5f0e8}
-.header .subtitle{color:#a09888;font-size:1.15em;font-weight:500;margin-bottom:8px}
-.header .date{color:#a09888;font-size:0.85em}
+.confidential-badge{display:inline-block;background:rgba(200,64,48,0.15);border:1px solid rgba(200,64,48,0.4);border-radius:6px;padding:4px 16px;font-size:12px;color:var(--red2);letter-spacing:2px;margin-bottom:16px;font-weight:700;font-family:'Noto Sans JP',sans-serif}
+.header h1{font-family:'Shippori Mincho',serif;font-size:2.2em;font-weight:900;margin-bottom:8px;letter-spacing:2px;color:var(--ink)}
+.header .subtitle{color:var(--ink3);font-size:1.15em;font-weight:500;margin-bottom:8px}
+.header .date{color:var(--ink4);font-size:0.85em}
 
 /* Section */
 .section{margin-bottom:64px}
-.section-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.section-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--ink3);padding-bottom:12px}
 .section-icon{font-size:1.1em}
 .badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;font-family:'Noto Sans JP',sans-serif}
-.badge-green{background:rgba(26,107,74,0.1);color:var(--green);border:1px solid rgba(26,107,74,0.3)}
-.badge-red{background:rgba(181,39,26,0.1);color:var(--red);border:1px solid rgba(181,39,26,0.3)}
-.badge-blue{background:rgba(26,74,138,0.1);color:var(--blue);border:1px solid rgba(26,74,138,0.3)}
-.badge-orange{background:rgba(154,122,40,0.1);color:var(--gold);border:1px solid rgba(154,122,40,0.3)}
-.badge-purple{background:rgba(107,74,138,0.1);color:#6b4a8a;border:1px solid rgba(107,74,138,0.3)}
+.badge-green{background:rgba(74,154,106,0.15);color:var(--green);border:1px solid rgba(74,154,106,0.35)}
+.badge-red{background:rgba(200,64,48,0.15);color:var(--red2);border:1px solid rgba(200,64,48,0.35)}
+.badge-blue{background:rgba(90,138,186,0.15);color:var(--blue2);border:1px solid rgba(90,138,186,0.35)}
+.badge-orange{background:rgba(184,152,48,0.15);color:var(--gold2);border:1px solid rgba(184,152,48,0.35)}
+.badge-purple{background:rgba(138,106,170,0.15);color:#8a6aaa;border:1px solid rgba(138,106,170,0.35)}
 
 /* Grid */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -68,22 +68,22 @@ body{background:var(--bg);color:var(--ink);font-family:'Noto Serif JP','Shippori
 .grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px}
 
 /* Card */
-.card{background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:20px}
 .card-green{border-left:4px solid var(--green)}
 .card-red{border-left:4px solid var(--red)}
 .card-blue{border-left:4px solid var(--blue)}
 .card-orange{border-left:4px solid var(--gold)}
-.card-purple{border-left:4px solid #6b4a8a}
+.card-purple{border-left:4px solid #8a6aaa}
 .card-label{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
 .card-value{font-size:2em;font-weight:900;line-height:1.1;color:var(--ink)}
-.card-note{font-size:12px;color:var(--ink3);margin-top:4px}
+.card-note{font-size:12px;color:var(--ink4);margin-top:4px}
 
 /* Tables */
-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface);border:1px solid var(--border2);border-radius:4px;overflow:hidden}
-th{padding:11px 16px;text-align:left;font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:2px;color:var(--ink3);font-weight:500;border-bottom:1px solid var(--border2);background:var(--surface2)}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+th{padding:11px 16px;text-align:left;font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:2px;color:var(--ink3);font-weight:500;border-bottom:1px solid var(--border);background:var(--surface2)}
 td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--ink2)}
 tr:last-child td{border-bottom:none}
-tr:hover td{background:rgba(0,0,0,0.015)}
+tr:hover td{background:rgba(255,255,255,0.02)}
 
 /* Big number */
 .big-number{font-size:4em;font-weight:900;line-height:1}
@@ -93,6 +93,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
 /* Timeline */
 .timeline{position:relative;padding-left:32px}
 .timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--border2)}
+
 .tl-item{position:relative;margin-bottom:24px}
 .tl-dot{position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;border:2px solid var(--bg)}
 .tl-year{font-family:'Shippori Mincho',serif;font-weight:900;font-size:15px;margin-bottom:2px}
@@ -105,29 +106,29 @@ tr:hover td{background:rgba(0,0,0,0.015)}
 .cause-desc{font-size:13px;color:var(--ink3);line-height:1.6}
 
 /* Quote */
-.quote-box{background:var(--surface2);border-left:4px solid var(--red);border-radius:0 4px 4px 0;padding:16px 20px;margin:12px 0;font-size:14px;font-style:italic;color:var(--ink2)}
+.quote-box{background:var(--surface);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:16px 20px;margin:12px 0;font-size:14px;font-style:italic;color:var(--ink2)}
 .quote-box .quote-source{font-size:12px;color:var(--ink4);font-style:normal;margin-top:8px}
 
 /* Highlight box */
-.highlight-box{background:rgba(181,39,26,0.06);border:1px solid rgba(181,39,26,0.25);border-radius:4px;padding:20px;margin:16px 0}
-.highlight-box.blue{background:rgba(26,74,138,0.06);border-color:rgba(26,74,138,0.25)}
-.highlight-box.green{background:rgba(26,107,74,0.06);border-color:rgba(26,107,74,0.25)}
-.highlight-box.orange{background:rgba(154,122,40,0.06);border-color:rgba(154,122,40,0.25)}
+.highlight-box{background:rgba(200,64,48,0.08);border:1px solid rgba(200,64,48,0.25);border-radius:4px;padding:20px;margin:16px 0}
+.highlight-box.blue{background:rgba(90,138,186,0.08);border-color:rgba(90,138,186,0.25)}
+.highlight-box.green{background:rgba(74,154,106,0.08);border-color:rgba(74,154,106,0.25)}
+.highlight-box.orange{background:rgba(184,152,48,0.08);border-color:rgba(184,152,48,0.25)}
 
 /* Comparison bar */
 .comp-bar-wrap{margin:8px 0}
 .comp-bar-label{font-size:12px;color:var(--ink3);margin-bottom:4px;display:flex;justify-content:space-between}
-.comp-bar{height:24px;border-radius:6px;background:var(--surface2);overflow:hidden;display:flex}
+.comp-bar{height:24px;border-radius:6px;background:var(--surface);overflow:hidden;display:flex}
 .comp-bar-fill{height:100%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;transition:width 0.3s}
 
 /* Phase marker */
-.phase-marker{display:inline-block;background:rgba(26,74,138,0.1);border:1px solid rgba(26,74,138,0.25);border-radius:6px;padding:3px 12px;font-size:12px;color:var(--blue);font-weight:700;letter-spacing:1px;margin-bottom:12px;font-family:'Noto Sans JP',sans-serif}
+.phase-marker{display:inline-block;background:rgba(90,138,186,0.12);border:1px solid rgba(90,138,186,0.3);border-radius:6px;padding:3px 12px;font-size:12px;color:var(--blue2);font-weight:700;letter-spacing:1px;margin-bottom:12px;font-family:'Noto Sans JP',sans-serif}
 
 /* Insight list */
 .insight-list{list-style:none;font-size:14px}
 .insight-list li{padding:6px 0 6px 20px;position:relative;border-bottom:1px solid var(--border)}
 .insight-list li:last-child{border-bottom:none}
-.insight-list li::before{content:'▸';position:absolute;left:0;color:var(--red);font-weight:700}
+.insight-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-weight:700}
 
 /* Chart containers */
 .chart-container{position:relative;height:320px;margin:16px 0}
@@ -397,8 +398,8 @@ tr:hover td{background:rgba(0,0,0,0.015)}
       <div class="tl-content">佐喜真候補の旧統一教会合同結婚式出席が発覚。自民候補の信頼性に直撃。玉城再選。ただし得票差は▲6.5万票に縮小。</div>
     </div>
     <div class="tl-item">
-      <div class="tl-dot" style="background:#6b4a8a"></div>
-      <div class="tl-year" style="color:#6b4a8a">2023〜2024年 ── 代執行</div>
+      <div class="tl-dot" style="background:#8a6aaa"></div>
+      <div class="tl-year" style="color:#8a6aaa">2023〜2024年 ── 代執行</div>
       <div class="tl-content">辺野古設計変更を巡り国が代執行。最高裁で県敗訴確定。<strong>法的手段は枯渇</strong>し「辺野古反対」の旗の実効性がゼロ化。同時に「諦め感」が広がり始める。</div>
     </div>
     <div class="tl-item">
@@ -422,7 +423,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
   <!-- 敗因1 -->
   <div class="card card-red" style="margin-bottom:16px">
     <div style="display:flex;align-items:flex-start;gap:16px">
-      <div class="cause-num" style="background:rgba(181,39,26,0.12);color:var(--red)">1</div>
+      <div class="cause-num" style="background:rgba(200,64,48,0.15);color:var(--red)">1</div>
       <div>
         <div class="cause-title" style="color:var(--red)">「尊厳の売り渡し」の原罪 ── 仲井眞の承認問題</div>
         <div class="cause-desc">
@@ -438,7 +439,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
   <!-- 敗因2 -->
   <div class="card card-red" style="margin-bottom:16px">
     <div style="display:flex;align-items:flex-start;gap:16px">
-      <div class="cause-num" style="background:rgba(181,39,26,0.12);color:var(--red)">2</div>
+      <div class="cause-num" style="background:rgba(200,64,48,0.15);color:var(--red)">2</div>
       <div>
         <div class="cause-title" style="color:var(--red)">「保守 vs 革新」の土俵に乗り続ける構造</div>
         <div class="cause-desc">
@@ -458,7 +459,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
   <!-- 敗因3 -->
   <div class="card card-orange" style="margin-bottom:16px">
     <div style="display:flex;align-items:flex-start;gap:16px">
-      <div class="cause-num" style="background:rgba(154,122,40,0.12);color:var(--gold)">3</div>
+      <div class="cause-num" style="background:rgba(184,152,48,0.15);color:var(--gold)">3</div>
       <div>
         <div class="cause-title" style="color:var(--gold)">「アメとムチ」政策 ── 振興予算と基地のリンク</div>
         <div class="cause-desc">
@@ -474,7 +475,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
   <!-- 敗因4 -->
   <div class="card card-orange" style="margin-bottom:16px">
     <div style="display:flex;align-items:flex-start;gap:16px">
-      <div class="cause-num" style="background:rgba(154,122,40,0.12);color:var(--gold)">4</div>
+      <div class="cause-num" style="background:rgba(184,152,48,0.15);color:var(--gold)">4</div>
       <div>
         <div class="cause-title" style="color:var(--gold)">候補者の「物語」の不在 ── 「何を考えているかわからない」</div>
         <div class="cause-desc">
@@ -490,7 +491,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
   <!-- 敗因5 -->
   <div class="card card-orange" style="margin-bottom:16px">
     <div style="display:flex;align-items:flex-start;gap:16px">
-      <div class="cause-num" style="background:rgba(154,122,40,0.12);color:var(--gold)">5</div>
+      <div class="cause-num" style="background:rgba(184,152,48,0.15);color:var(--gold)">5</div>
       <div>
         <div class="cause-title" style="color:var(--gold)">民意の無視 ── 県民投票72%を踏みにじった代償</div>
         <div class="cause-desc">
@@ -538,12 +539,12 @@ tr:hover td{background:rgba(0,0,0,0.015)}
     「建白書」の精神を掲げ、翁長雄志を中心に保守離党組・革新政党・経済界（金秀・かりゆし等）・市民団体が結集。文字通りの「オール沖縄」だった。<strong style="color:var(--green)">保守と革新が手を結んだ日本政治史上稀な超党派連合。</strong>
   </p>
 
-  <div class="phase-marker" style="background:rgba(26,107,74,0.1);border-color:rgba(26,107,74,0.25);color:var(--green)">PHASE 2: 全盛期（2014〜2018年）</div>
+  <div class="phase-marker" style="background:rgba(74,154,106,0.1);border-color:rgba(74,154,106,0.25);color:var(--green)">PHASE 2: 全盛期（2014〜2018年）</div>
   <p style="font-size:14px;margin-bottom:16px">
     知事選・衆院選・参院選で圧勝を重ねる。翁長知事のカリスマ的リーダーシップの下、県選出国会議員の大部分を占有。辺野古反対の全県的民意を体現する「無敵の連合体」。
   </p>
 
-  <div class="phase-marker" style="background:rgba(154,122,40,0.1);border-color:rgba(154,122,40,0.25);color:var(--gold)">PHASE 3: 経済界の離脱（2018〜2021年）</div>
+  <div class="phase-marker" style="background:rgba(184,152,48,0.1);border-color:rgba(184,152,48,0.25);color:var(--gold2)">PHASE 3: 経済界の離脱（2018〜2021年）</div>
   <div class="grid-2" style="margin-bottom:16px">
     <div class="card card-orange">
       <div class="card-label">2018年 かりゆしグループ脱退</div>
@@ -555,7 +556,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
     </div>
   </div>
 
-  <div class="phase-marker" style="background:rgba(181,39,26,0.1);border-color:rgba(181,39,26,0.25);color:var(--red)">PHASE 4: 「共産主導化」と退潮（2022年〜）</div>
+  <div class="phase-marker" style="background:rgba(200,64,48,0.1);border-color:rgba(200,64,48,0.25);color:var(--red2)">PHASE 4: 「共産主導化」と退潮（2022年〜）</div>
   <p style="font-size:14px;margin-bottom:12px">
     経済界離脱後、実質的な運営で共産党・社民党の比重が増大。当初の「保革を超えた」運動体から<strong style="color:var(--red)">事実上の革新共闘体制</strong>に変質。市長選では2022年以降12連敗。
   </p>
@@ -801,78 +802,78 @@ tr:hover td{background:rgba(0,0,0,0.015)}
 </div>
 
 <!-- ===== SEC13: 結論と提言 ===== -->
-<div class="section" style="background:var(--ink);color:#f5f0e8;padding:32px 36px;border-radius:4px">
-  <div class="section-title" style="color:#f5f0e8;border-bottom-color:rgba(245,240,232,0.3)"><span class="section-icon">🎯</span>結論と2026年への教訓 ── 同じ轍を踏まないために</div>
+<div class="section" style="background:var(--surface2);border:1px solid var(--gold);padding:32px 36px;border-radius:4px">
+  <div class="section-title" style="color:var(--ink);border-bottom-color:var(--border)"><span class="section-icon">🎯</span>結論と2026年への教訓 ── 同じ轍を踏まないために</div>
 
   <div style="font-size:16px;font-weight:900;color:var(--gold2);margin-bottom:16px;text-align:center">12年の敗北から導かれる5つの教訓</div>
 
   <div class="grid-2" style="margin-bottom:16px">
-    <div class="card card-green" style="background:rgba(245,240,232,0.08);border-color:rgba(245,240,232,0.15)">
+    <div class="card card-green" style="background:rgba(255,255,255,0.03);border-color:var(--border)">
       <div style="display:flex;align-items:flex-start;gap:12px">
-        <div class="cause-num" style="background:rgba(26,107,74,0.2);color:var(--green)">1</div>
+        <div class="cause-num" style="background:rgba(74,154,106,0.15);color:var(--green)">1</div>
         <div>
           <div class="cause-title" style="color:var(--green)">「自民の候補」ではなく「沖縄の候補」として戦え</div>
-          <div class="cause-desc" style="color:#ccc8c0">経済界主導の選考委員会で擁立された出自を最大活用。「政党の候補」ではなく「沖縄経済界の候補」という文脈を前面に。過去の「自民・公明推薦」を前面に出す戦略は12年間失敗し続けている。</div>
+          <div class="cause-desc" style="color:var(--ink2)">経済界主導の選考委員会で擁立された出自を最大活用。「政党の候補」ではなく「沖縄経済界の候補」という文脈を前面に。過去の「自民・公明推薦」を前面に出す戦略は12年間失敗し続けている。</div>
         </div>
       </div>
     </div>
-    <div class="card card-green" style="background:rgba(245,240,232,0.08);border-color:rgba(245,240,232,0.15)">
+    <div class="card card-green" style="background:rgba(255,255,255,0.03);border-color:var(--border)">
       <div style="display:flex;align-items:flex-start;gap:12px">
-        <div class="cause-num" style="background:rgba(26,107,74,0.2);color:var(--green)">2</div>
+        <div class="cause-num" style="background:rgba(74,154,106,0.15);color:var(--green)">2</div>
         <div>
           <div class="cause-title" style="color:var(--green)">「古謝の物語」を早期に確立せよ</div>
-          <div class="cause-desc" style="color:#ccc8c0">翁長には「保守が立ち上がった」物語があった。玉城には「翁長の遺志」物語があった。古謝には「なぜ総務省エリートが沖縄知事を目指すのか」に答える物語がまだない。<strong style="color:#f5f0e8">告示前に完成しなければ玉城優位が続く。</strong></div>
+          <div class="cause-desc" style="color:var(--ink2)">翁長には「保守が立ち上がった」物語があった。玉城には「翁長の遺志」物語があった。古謝には「なぜ総務省エリートが沖縄知事を目指すのか」に答える物語がまだない。<strong style="color:var(--ink)">告示前に完成しなければ玉城優位が続く。</strong></div>
         </div>
       </div>
     </div>
-    <div class="card card-green" style="background:rgba(245,240,232,0.08);border-color:rgba(245,240,232,0.15)">
+    <div class="card card-green" style="background:rgba(255,255,255,0.03);border-color:var(--border)">
       <div style="display:flex;align-items:flex-start;gap:12px">
-        <div class="cause-num" style="background:rgba(26,107,74,0.2);color:var(--green)">3</div>
+        <div class="cause-num" style="background:rgba(74,154,106,0.15);color:var(--green)">3</div>
         <div>
           <div class="cause-title" style="color:var(--green)">基地問題は「曖昧」ではなく「再定義」で臨め</div>
-          <div class="cause-desc" style="color:#ccc8c0">佐喜真の失敗は「曖昧にしたこと」。古謝は「沖縄の誇りの定義を変える」 ── 対立から創造へ ── という再定義で臨むべき。「諦め」ではなく「戦いの舞台を変える」というフレーミング。</div>
+          <div class="cause-desc" style="color:var(--ink2)">佐喜真の失敗は「曖昧にしたこと」。古謝は「沖縄の誇りの定義を変える」 ── 対立から創造へ ── という再定義で臨むべき。「諦め」ではなく「戦いの舞台を変える」というフレーミング。</div>
         </div>
       </div>
     </div>
-    <div class="card card-green" style="background:rgba(245,240,232,0.08);border-color:rgba(245,240,232,0.15)">
+    <div class="card card-green" style="background:rgba(255,255,255,0.03);border-color:var(--border)">
       <div style="display:flex;align-items:flex-start;gap:12px">
-        <div class="cause-num" style="background:rgba(26,107,74,0.2);color:var(--green)">4</div>
+        <div class="cause-num" style="background:rgba(74,154,106,0.15);color:var(--green)">4</div>
         <div>
           <div class="cause-title" style="color:var(--green)">「暮らしの選挙」に争点を移せ ── ただし尊厳を否定するな</div>
-          <div class="cause-desc" style="color:#ccc8c0">市町村選や衆院選で「経済争点 = 保守勝利」は実証済み。ただし「基地問題より経済が大事」と言った瞬間に負ける。「基地問題は国が決める。暮らしの問題は私たちが決める」という分離が鍵。</div>
+          <div class="cause-desc" style="color:var(--ink2)">市町村選や衆院選で「経済争点 = 保守勝利」は実証済み。ただし「基地問題より経済が大事」と言った瞬間に負ける。「基地問題は国が決める。暮らしの問題は私たちが決める」という分離が鍵。</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="card card-blue" style="background:rgba(245,240,232,0.08);border-color:rgba(245,240,232,0.15)">
+  <div class="card card-blue" style="background:rgba(255,255,255,0.03);border-color:var(--border)">
     <div style="display:flex;align-items:flex-start;gap:12px">
-      <div class="cause-num" style="background:rgba(26,74,138,0.2);color:var(--blue2)">5</div>
+      <div class="cause-num" style="background:rgba(90,138,186,0.15);color:var(--blue2)">5</div>
       <div>
         <div class="cause-title" style="color:var(--blue2)">無党派層45%・40代棄権者の掘り起こしが勝利の数値条件</div>
-        <div class="cause-desc" style="color:#ccc8c0">
-          無党派層の取得率を28%→45%に引き上げ、40代の投票率を+5pt向上させ、30代以下の投票率を+5pt向上させる。理論上の目標得票は<strong style="color:#f5f0e8">約348,000票</strong>（2022年佐喜真から+7.4万票）。この上積みは「自公固め + 維新・国民民主 + 無党派 + 棄権者掘り起こし」の4層から実現する。
+        <div class="cause-desc" style="color:var(--ink2)">
+          無党派層の取得率を28%→45%に引き上げ、40代の投票率を+5pt向上させ、30代以下の投票率を+5pt向上させる。理論上の目標得票は<strong style="color:var(--ink)">約348,000票</strong>（2022年佐喜真から+7.4万票）。この上積みは「自公固め + 維新・国民民主 + 無党派 + 棄権者掘り起こし」の4層から実現する。
         </div>
       </div>
     </div>
   </div>
 
-  <div class="quote-box" style="margin-top:20px;border-left-color:var(--gold);background:rgba(245,240,232,0.06);color:#ccc8c0">
+  <div class="quote-box" style="margin-top:20px;border-left-color:var(--gold);background:var(--surface);color:var(--ink2)">
     <strong style="color:var(--gold2)">最後の問い:</strong><br>
     「なぜ自民党は12年間負け続けたのか」の答えは、「沖縄の尊厳を軽視し続けたから」に尽きる。2026年に問われるのは ──<br><br>
-    <strong style="font-size:16px;color:#f5f0e8">古謝玄太は、沖縄の尊厳を否定せずに、暮らしを変えられる候補者として信じてもらえるか。</strong><br><br>
-    12年の呪いを解く鍵は、政策でも組織力でもなく、<strong style="color:#f5f0e8">「この人は沖縄の人間だ」と県民に感じてもらえるかどうか</strong>にかかっている。
-    <div class="quote-source" style="color:#9a8f7e">── 選挙参謀AIチーム分析</div>
+    <strong style="font-size:16px;color:var(--ink)">古謝玄太は、沖縄の尊厳を否定せずに、暮らしを変えられる候補者として信じてもらえるか。</strong><br><br>
+    12年の呪いを解く鍵は、政策でも組織力でもなく、<strong style="color:var(--ink)">「この人は沖縄の人間だ」と県民に感じてもらえるかどうか</strong>にかかっている。
+    <div class="quote-source" style="color:var(--ink4)">── 選挙参謀AIチーム分析</div>
   </div>
 
-  <div class="card" style="background:rgba(26,107,74,0.1);border:1px solid rgba(26,107,74,0.3);margin-top:24px">
+  <div class="card" style="background:rgba(74,154,106,0.08);border:1px solid rgba(74,154,106,0.3);margin-top:24px">
     <div style="font-size:16px;font-weight:900;color:var(--green);margin-bottom:16px">次のアクション</div>
-    <ul class="insight-list" style="font-size:14px;color:#ccc8c0">
-      <li style="border-bottom-color:rgba(245,240,232,0.15)"><strong style="color:#f5f0e8">[ ] 「古謝の物語」の言語化と浸透（最優先・告示前に完成）</strong></li>
-      <li style="border-bottom-color:rgba(245,240,232,0.15)"><strong style="color:#f5f0e8">[ ] 基地問題ポジションの確定声明</strong></li>
-      <li style="border-bottom-color:rgba(245,240,232,0.15)"><strong style="color:#f5f0e8">[ ] 無党派層向けメッセージの設計とテスト</strong></li>
-      <li style="border-bottom-color:rgba(245,240,232,0.15)"><strong style="color:#f5f0e8">[ ] 40代棄権者向けSNS戦略の具体化</strong></li>
-      <li style="border-bottom-color:rgba(245,240,232,0.15)"><strong style="color:#f5f0e8">[ ] 経済政策の数値コミット（子育て支援額、賃金目標等）</strong></li>
+    <ul class="insight-list" style="font-size:14px;color:var(--ink2)">
+      <li style="border-bottom-color:var(--border)"><strong style="color:var(--ink)">[ ] 「古謝の物語」の言語化と浸透（最優先・告示前に完成）</strong></li>
+      <li style="border-bottom-color:var(--border)"><strong style="color:var(--ink)">[ ] 基地問題ポジションの確定声明</strong></li>
+      <li style="border-bottom-color:var(--border)"><strong style="color:var(--ink)">[ ] 無党派層向けメッセージの設計とテスト</strong></li>
+      <li style="border-bottom-color:var(--border)"><strong style="color:var(--ink)">[ ] 40代棄権者向けSNS戦略の具体化</strong></li>
+      <li style="border-bottom-color:var(--border)"><strong style="color:var(--ink)">[ ] 経済政策の数値コミット（子育て支援額、賃金目標等）</strong></li>
     </ul>
   </div>
 </div>
@@ -895,16 +896,16 @@ new Chart(document.getElementById('marginChart'),{
       {
         label:'オール沖縄系 得票',
         data:[360820, 396632, 339767],
-        backgroundColor:'rgba(26,74,138,0.7)',
-        borderColor:'#1a4a8a',
+        backgroundColor:'rgba(90,138,186,0.7)',
+        borderColor:'#5a8aba',
         borderWidth:1.5,
         borderRadius:4
       },
       {
         label:'自民系 得票',
         data:[261076, 316458, 274844],
-        backgroundColor:'rgba(181,39,26,0.7)',
-        borderColor:'#b5271a',
+        backgroundColor:'rgba(200,64,48,0.7)',
+        borderColor:'#c84030',
         borderWidth:1.5,
         borderRadius:4
       }
@@ -914,7 +915,7 @@ new Chart(document.getElementById('marginChart'),{
     responsive:true,
     maintainAspectRatio:false,
     plugins:{
-      legend:{position:'top',labels:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:12}}},
+      legend:{position:'top',labels:{color:'#8a8070',font:{family:'Noto Sans JP',size:12}}},
       tooltip:{
         callbacks:{
           label:function(c){return c.dataset.label+': '+c.raw.toLocaleString()+'票'}
@@ -922,10 +923,10 @@ new Chart(document.getElementById('marginChart'),{
       }
     },
     scales:{
-      x:{ticks:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:11}},grid:{color:'rgba(192,184,168,0.4)'}},
+      x:{ticks:{color:'#8a8070',font:{family:'Noto Sans JP',size:11}},grid:{color:'rgba(74,69,56,0.5)'}},
       y:{
-        ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return (v/10000).toFixed(0)+'万'}},
-        grid:{color:'rgba(192,184,168,0.4)'},
+        ticks:{color:'#8a8070',font:{size:11},callback:function(v){return (v/10000).toFixed(0)+'万'}},
+        grid:{color:'rgba(74,69,56,0.5)'},
         beginAtZero:true
       }
     }
@@ -940,16 +941,16 @@ new Chart(document.getElementById('budgetChart'),{
     datasets:[{
       label:'沖縄振興予算（億円）',
       data:[2937, 3001, 3501, 3340, 3350, 3150, 3010, 3010, 3010, 3010, 2998, 2684, 2678, 2642, 2647],
-      borderColor:'#1a4a8a',
-      backgroundColor:'rgba(26,74,138,0.08)',
+      borderColor:'#5a8aba',
+      backgroundColor:'rgba(90,138,186,0.1)',
       fill:true,
       tension:0.3,
       pointRadius:5,
       pointBackgroundColor:function(ctx){
-        return ctx.dataIndex === 2 ? '#b5271a' : '#1a4a8a';
+        return ctx.dataIndex === 2 ? '#c84030' : '#5a8aba';
       },
       pointBorderColor:function(ctx){
-        return ctx.dataIndex === 2 ? '#b5271a' : '#1a4a8a';
+        return ctx.dataIndex === 2 ? '#c84030' : '#5a8aba';
       },
       pointRadius:function(ctx){
         return ctx.dataIndex === 2 ? 8 : 5;
@@ -969,10 +970,10 @@ new Chart(document.getElementById('budgetChart'),{
       annotation: undefined
     },
     scales:{
-      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{color:'rgba(192,184,168,0.4)'}},
+      x:{ticks:{color:'#8a8070',font:{size:11}},grid:{color:'rgba(74,69,56,0.5)'}},
       y:{
-        ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},
-        grid:{color:'rgba(192,184,168,0.4)'},
+        ticks:{color:'#8a8070',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},
+        grid:{color:'rgba(74,69,56,0.5)'},
         min:2400,
         max:3600
       }
@@ -989,16 +990,16 @@ new Chart(document.getElementById('indepChart'),{
       {
         label:'オール沖縄系への投票',
         data:[62, 60, 58],
-        backgroundColor:'rgba(26,74,138,0.7)',
-        borderColor:'#1a4a8a',
+        backgroundColor:'rgba(90,138,186,0.7)',
+        borderColor:'#5a8aba',
         borderWidth:1.5,
         borderRadius:4
       },
       {
         label:'自民系への投票',
         data:[24, 26, 28],
-        backgroundColor:'rgba(181,39,26,0.7)',
-        borderColor:'#b5271a',
+        backgroundColor:'rgba(200,64,48,0.7)',
+        borderColor:'#c84030',
         borderWidth:1.5,
         borderRadius:4
       }
@@ -1008,12 +1009,12 @@ new Chart(document.getElementById('indepChart'),{
     responsive:true,
     maintainAspectRatio:false,
     plugins:{
-      legend:{position:'top',labels:{color:'#6b5f4e',font:{size:11}}},
+      legend:{position:'top',labels:{color:'#8a8070',font:{size:11}}},
       tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.raw+'%'}}}
     },
     scales:{
-      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{display:false}},
-      y:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(192,184,168,0.4)'},max:70,beginAtZero:true}
+      x:{ticks:{color:'#8a8070',font:{size:11}},grid:{display:false}},
+      y:{ticks:{color:'#8a8070',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(74,69,56,0.5)'},max:70,beginAtZero:true}
     }
   }
 });
@@ -1026,12 +1027,12 @@ new Chart(document.getElementById('turnoutChart'),{
     datasets:[{
       label:'知事選 投票率',
       data:[64.13, 63.24, 57.92],
-      borderColor:'#9a7a28',
-      backgroundColor:'rgba(154,122,40,0.08)',
+      borderColor:'#b89830',
+      backgroundColor:'rgba(184,152,48,0.1)',
       fill:true,
       tension:0.3,
       pointRadius:6,
-      pointBackgroundColor:'#9a7a28'
+      pointBackgroundColor:'#b89830'
     }]
   },
   options:{
@@ -1042,8 +1043,8 @@ new Chart(document.getElementById('turnoutChart'),{
       tooltip:{callbacks:{label:function(c){return '投票率: '+c.raw+'%'}}}
     },
     scales:{
-      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{display:false}},
-      y:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(192,184,168,0.4)'},min:50,max:70}
+      x:{ticks:{color:'#8a8070',font:{size:11}},grid:{display:false}},
+      y:{ticks:{color:'#8a8070',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(74,69,56,0.5)'},min:50,max:70}
     }
   }
 });
@@ -1057,22 +1058,22 @@ new Chart(document.getElementById('proportionalChart'),{
       {
         label:'自民党 比例得票率（沖縄）',
         data:[26.2, 22.5, 24.8, 25.1, 26.8],
-        borderColor:'#b5271a',
-        backgroundColor:'rgba(181,39,26,0.08)',
+        borderColor:'#c84030',
+        backgroundColor:'rgba(200,64,48,0.1)',
         fill:true,
         tension:0.3,
         pointRadius:6,
-        pointBackgroundColor:'#b5271a'
+        pointBackgroundColor:'#c84030'
       },
       {
         label:'自民党 比例得票率（全国平均）',
         data:[37.4, 33.1, 33.3, 34.7, 36.0],
-        borderColor:'#9a8f7e',
-        backgroundColor:'rgba(154,143,126,0.05)',
+        borderColor:'#8a8070',
+        backgroundColor:'rgba(138,128,112,0.05)',
         fill:false,
         tension:0.3,
         pointRadius:5,
-        pointBackgroundColor:'#9a8f7e',
+        pointBackgroundColor:'#8a8070',
         borderDash:[6,3]
       }
     ]
@@ -1081,12 +1082,12 @@ new Chart(document.getElementById('proportionalChart'),{
     responsive:true,
     maintainAspectRatio:false,
     plugins:{
-      legend:{position:'top',labels:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:12}}},
+      legend:{position:'top',labels:{color:'#8a8070',font:{family:'Noto Sans JP',size:12}}},
       tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.raw+'%'}}}
     },
     scales:{
-      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{color:'rgba(192,184,168,0.4)'}},
-      y:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(192,184,168,0.4)'},min:15,max:45}
+      x:{ticks:{color:'#8a8070',font:{size:11}},grid:{color:'rgba(74,69,56,0.5)'}},
+      y:{ticks:{color:'#8a8070',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(74,69,56,0.5)'},min:15,max:45}
     }
   }
 });
@@ -1098,8 +1099,8 @@ new Chart(document.getElementById('econChart'),{
     labels:['基地関連収入（2019年度）','観光収入（2018年度）'],
     datasets:[{
       data:[2712, 7047],
-      backgroundColor:['rgba(26,74,138,0.7)','rgba(26,107,74,0.7)'],
-      borderColor:['#1a4a8a','#1a6b4a'],
+      backgroundColor:['rgba(90,138,186,0.7)','rgba(74,154,106,0.7)'],
+      borderColor:['#5a8aba','#4a9a6a'],
       borderWidth:1.5,
       borderRadius:4
     }]
@@ -1113,8 +1114,8 @@ new Chart(document.getElementById('econChart'),{
       tooltip:{callbacks:{label:function(c){return c.raw.toLocaleString()+'億円'}}}
     },
     scales:{
-      x:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},grid:{color:'rgba(192,184,168,0.4)'},beginAtZero:true},
-      y:{ticks:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:12}},grid:{display:false}}
+      x:{ticks:{color:'#8a8070',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},grid:{color:'rgba(74,69,56,0.5)'},beginAtZero:true},
+      y:{ticks:{color:'#8a8070',font:{family:'Noto Sans JP',size:12}},grid:{display:false}}
     }
   }
 });

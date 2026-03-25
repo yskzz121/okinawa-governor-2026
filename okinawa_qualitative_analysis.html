@@ -7,22 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f5f0e8;
-    --surface: #fffdf8;
-    --surface2: #f0ebe0;
-    --border: #d6cfc0;
-    --border2: #c0b8a8;
-    --ink: #1a1510;
-    --ink2: #3d3628;
-    --ink3: #6b5f4e;
-    --ink4: #9a8f7e;
-    --red: #b5271a;
-    --red2: #d94030;
-    --blue: #1a4a8a;
-    --blue2: #2563a0;
-    --gold: #9a7a28;
-    --gold2: #c4a040;
-    --green: #1a6b4a;
+    --bg: #12100e;
+    --surface: #1c1a16;
+    --surface2: #262420;
+    --border: #3a352c;
+    --border2: #4a4538;
+    --ink: #e8e0d4;
+    --ink2: #c4baa8;
+    --ink3: #8a8070;
+    --ink4: #6a6050;
+    --red: #c84030;
+    --red2: #e05040;
+    --blue: #5a8aba;
+    --blue2: #7aaad4;
+    --gold: #b89830;
+    --gold2: #d4b44c;
+    --green: #4a9a6a;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
@@ -35,12 +35,12 @@
 
   /* ── HEADER ── */
   .header {
-    background: var(--ink);
-    color: #f5f0e8;
+    background: var(--surface);
+    color: #e8e0d4;
     padding: 48px 56px 40px;
     position: relative;
     overflow: hidden;
-    border-bottom: 4px solid var(--red);
+    border-bottom: 4px solid var(--gold);
   }
   .header::after {
     content: '';
@@ -51,8 +51,8 @@
       -45deg,
       transparent,
       transparent 8px,
-      rgba(255,255,255,0.03) 8px,
-      rgba(255,255,255,0.03) 16px
+      rgba(255,255,255,0.02) 8px,
+      rgba(255,255,255,0.02) 16px
     );
   }
   .header-eyebrow {
@@ -69,12 +69,12 @@
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 1.3;
-    color: #f5f0e8;
+    color: #e8e0d4;
   }
   .header h1 em { color: var(--gold2); font-style: normal; }
   .header-sub {
     font-family: 'Noto Sans JP', sans-serif;
-    color: #a09888;
+    color: var(--ink3);
     font-size: 12px;
     margin-top: 10px;
     letter-spacing: 1px;
@@ -100,7 +100,7 @@
     color: var(--ink);
     margin-bottom: 6px;
     padding-bottom: 12px;
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 2px solid var(--border2);
   }
   .section-subtitle {
     font-size: 12px;
@@ -114,8 +114,8 @@
   .election-card { background: var(--surface); border-right: 1px solid var(--border2); }
   .election-card:last-child { border-right: none; }
   .ec-head {
-    background: var(--ink);
-    color: #f5f0e8;
+    background: var(--surface2);
+    color: #e8e0d4;
     padding: 14px 18px 12px;
     font-family: 'Shippori Mincho', serif;
   }
@@ -124,7 +124,7 @@
     font-weight: 700;
     letter-spacing: 2px;
   }
-  .ec-title { font-size: 12px; color: #a09888; margin-top: 2px; }
+  .ec-title { font-size: 12px; color: var(--ink3); margin-top: 2px; }
   .ec-body { padding: 18px; }
   .ec-keyword {
     display: inline-block;
@@ -136,9 +136,9 @@
     font-weight: 700;
     letter-spacing: 1px;
   }
-  .kw-red { background: rgba(181,39,26,0.1); color: var(--red); border: 1px solid rgba(181,39,26,0.3); }
-  .kw-blue { background: rgba(26,74,138,0.1); color: var(--blue); border: 1px solid rgba(26,74,138,0.3); }
-  .kw-gold { background: rgba(154,122,40,0.1); color: var(--gold); border: 1px solid rgba(154,122,40,0.3); }
+  .kw-red { background: rgba(200,64,48,0.12); color: var(--red); border: 1px solid rgba(200,64,48,0.3); }
+  .kw-blue { background: rgba(90,138,186,0.12); color: var(--blue); border: 1px solid rgba(90,138,186,0.3); }
+  .kw-gold { background: rgba(184,152,48,0.12); color: var(--gold2); border: 1px solid rgba(184,152,48,0.3); }
   .ec-essence {
     font-size: 13px;
     color: var(--ink2);
@@ -201,7 +201,7 @@
     width: 120px;
   }
   .analysis-table tr:last-child td { border-bottom: none; }
-  .analysis-table tr:hover td { background: rgba(0,0,0,0.015); }
+  .analysis-table tr:hover td { background: rgba(255,255,255,0.02); }
   .year-col {
     font-family: 'Shippori Mincho', serif;
     font-size: 18px;
@@ -224,11 +224,11 @@
     font-size: 11px;
     letter-spacing: 2px;
     font-weight: 700;
-    color: #f5f0e8;
+    color: #e8e0d4;
   }
-  .factor-head.win { background: var(--blue); }
-  .factor-head.lose { background: var(--red); }
-  .factor-head.neutral { background: var(--ink3); }
+  .factor-head.win { background: #3a6a9a; }
+  .factor-head.lose { background: #a03028; }
+  .factor-head.neutral { background: var(--ink4); }
   .factor-body { padding: 16px 18px; }
   .factor-item {
     display: flex;
@@ -250,8 +250,8 @@
     white-space: nowrap;
     margin-top: 2px;
   }
-  .fi-win { background: rgba(26,74,138,0.12); color: var(--blue); }
-  .fi-lose { background: rgba(181,39,26,0.12); color: var(--red); }
+  .fi-win { background: rgba(90,138,186,0.15); color: var(--blue); }
+  .fi-lose { background: rgba(200,64,48,0.15); color: var(--red); }
 
   /* ── TURNING POINT TIMELINE ── */
   .timeline { margin-bottom: 48px; }
@@ -275,7 +275,7 @@
     width: 10px; height: 10px;
     background: var(--red);
     border-radius: 50%;
-    border: 2px solid var(--bg);
+    border: 2px solid var(--surface);
   }
   .tl-year-label {
     font-family: 'Shippori Mincho', serif;
@@ -317,10 +317,10 @@
     border: 1px solid;
     letter-spacing: 1px;
   }
-  .tag-win { color: var(--blue); border-color: var(--blue); background: rgba(26,74,138,0.07); }
-  .tag-lose { color: var(--red); border-color: var(--red); background: rgba(181,39,26,0.07); }
+  .tag-win { color: var(--blue); border-color: var(--blue); background: rgba(90,138,186,0.1); }
+  .tag-lose { color: var(--red); border-color: var(--red); background: rgba(200,64,48,0.1); }
   .tag-neutral { color: var(--ink3); border-color: var(--border2); }
-  .tag-gold { color: var(--gold); border-color: var(--gold); background: rgba(154,122,40,0.07); }
+  .tag-gold { color: var(--gold2); border-color: var(--gold); background: rgba(184,152,48,0.1); }
 
   /* ── INSIGHT CARDS ── */
   .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
@@ -370,8 +370,8 @@
     overflow: hidden;
   }
   .sb-head {
-    background: var(--ink2);
-    color: #f5f0e8;
+    background: var(--surface2);
+    color: #e8e0d4;
     padding: 14px 20px;
     display: flex;
     gap: 16px;
@@ -426,8 +426,8 @@
 
   /* ── FINAL BOX ── */
   .final-box {
-    background: var(--ink);
-    color: #f5f0e8;
+    background: var(--surface2);
+    color: #e8e0d4;
     padding: 32px 36px;
     border-radius: 4px;
     margin-bottom: 40px;
@@ -442,10 +442,10 @@
   .final-box p {
     font-size: 13px;
     line-height: 2;
-    color: #ccc8c0;
+    color: var(--ink2);
     margin-bottom: 12px;
   }
-  .final-box strong { color: #f5f0e8; }
+  .final-box strong { color: #e8e0d4; }
 
   /* ── FOOTNOTE ── */
   .footnote {
@@ -463,16 +463,16 @@
   }
 </style>
 <style id="pw-gate-css">
-#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#0a0c14;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
+#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#12100e;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
 #pw-overlay .pw-box{text-align:center;max-width:380px;width:100%;padding:24px}
-#pw-overlay h2{color:#e8eaf0;font-size:1.4rem;margin-bottom:6px}
-#pw-overlay .pw-sub{color:#8890a8;font-size:13px;margin-bottom:28px}
-#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #252a3d;background:#111420;color:#e8eaf0;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
-#pw-overlay input:focus{border-color:#4a90d9}
-#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#e63946;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
-#pw-overlay button:hover{background:#c1121f}
-#pw-overlay .pw-err{color:#e63946;font-size:13px;margin-top:8px;display:none}
-#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#4a90d9;font-size:12px;text-decoration:none}
+#pw-overlay h2{color:#e8e0d4;font-size:1.4rem;margin-bottom:6px}
+#pw-overlay .pw-sub{color:#8a8070;font-size:13px;margin-bottom:28px}
+#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #3a352c;background:#1c1a16;color:#e8e0d4;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
+#pw-overlay input:focus{border-color:#5a8aba}
+#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#c84030;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
+#pw-overlay button:hover{background:#a03028}
+#pw-overlay .pw-err{color:#c84030;font-size:13px;margin-top:8px;display:none}
+#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#5a8aba;font-size:12px;text-decoration:none}
 </style>
 </head>
 <body>

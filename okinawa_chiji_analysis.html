@@ -4,34 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>沖縄県知事選 定量分析レポート 2014-2022</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0c14;
-    --surface: #111420;
-    --surface2: #1a1f30;
-    --border: #252a3d;
-    --accent: #e63946;
-    --accent2: #4a90d9;
-    --accent3: #f4a261;
-    --text: #e8eaf0;
-    --text-muted: #8890a8;
-    --green: #2ec4b6;
-    --yellow: #ffd166;
+    --bg: #12100e;
+    --surface: #1c1a16;
+    --surface2: #262420;
+    --border: #3a352c;
+    --border2: #4a4538;
+    --red: #c84030;
+    --red2: #e05040;
+    --blue: #5a8aba;
+    --blue2: #7aaad4;
+    --gold: #b89830;
+    --gold2: #d4b44c;
+    --ink: #e8e0d4;
+    --ink2: #c4baa8;
+    --ink3: #8a8070;
+    --ink4: #6a6050;
+    --green: #4a9a6a;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     background: var(--bg);
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink);
+    font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.9;
   }
 
   /* ── HEADER ── */
   .header {
-    background: linear-gradient(135deg, #0d0f1c 0%, #151929 50%, #0a0c14 100%);
-    border-bottom: 2px solid var(--accent);
+    background: var(--surface);
+    border-bottom: 4px solid var(--gold);
     padding: 40px 48px 32px;
     position: relative;
     overflow: hidden;
@@ -39,30 +44,36 @@
   .header::before {
     content: '';
     position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(230,57,70,0.12) 0%, transparent 70%);
+    top: 0; right: 0;
+    width: 200px; height: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.02) 8px,
+      rgba(255,255,255,0.02) 16px
+    );
     pointer-events: none;
   }
   .header-tag {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     letter-spacing: 3px;
-    color: var(--accent);
+    color: var(--gold2);
     text-transform: uppercase;
     margin-bottom: 10px;
   }
   .header h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 32px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: #fff;
     line-height: 1.2;
   }
-  .header h1 span { color: var(--accent); }
+  .header h1 span { color: var(--gold2); }
   .header-sub {
-    color: var(--text-muted);
+    color: var(--ink3);
     font-size: 13px;
     margin-top: 8px;
   }
@@ -72,10 +83,10 @@
 
   /* ── SECTION TITLE ── */
   .section-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 13px;
     letter-spacing: 3px;
-    color: var(--accent);
+    color: var(--red);
     text-transform: uppercase;
     margin-bottom: 20px;
     padding-bottom: 8px;
@@ -88,7 +99,7 @@
     content: '';
     display: inline-block;
     width: 16px; height: 3px;
-    background: var(--accent);
+    background: var(--red);
     border-radius: 2px;
   }
 
@@ -98,37 +109,38 @@
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 20px;
   }
   .card-header {
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     letter-spacing: 2px;
-    color: var(--text-muted);
+    color: var(--ink3);
     text-transform: uppercase;
     margin-bottom: 6px;
   }
   .card-year {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 28px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 16px;
   }
-  .card-year span { font-size: 14px; color: var(--text-muted); }
+  .card-year span { font-size: 14px; color: var(--ink3); }
 
   /* KPI row */
   .kpi-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
   .kpi { flex: 1; min-width: 80px; }
-  .kpi-label { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 3px; }
+  .kpi-label { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; color: var(--ink3); letter-spacing: 1px; margin-bottom: 3px; }
   .kpi-val {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 22px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--ink);
   }
-  .kpi-val.up { color: var(--accent2); }
-  .kpi-val.down { color: var(--accent); }
+  .kpi-val.up { color: var(--blue); }
+  .kpi-val.down { color: var(--red); }
 
   /* candidate rows */
   .cand-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
@@ -146,13 +158,13 @@
     color: #fff;
     transition: width 1s ease;
   }
-  .bar-red { background: linear-gradient(90deg, #e63946 0%, #c1121f 100%); }
-  .bar-blue { background: linear-gradient(90deg, #4a90d9 0%, #2563a0 100%); }
-  .bar-gray { background: linear-gradient(90deg, #556 0%, #334 100%); }
-  .cand-votes { font-size: 12px; color: var(--text-muted); min-width: 85px; text-align: right; }
+  .bar-red { background: linear-gradient(90deg, #c84030 0%, #a03028 100%); }
+  .bar-blue { background: linear-gradient(90deg, #5a8aba 0%, #3a6a9a 100%); }
+  .bar-gray { background: linear-gradient(90deg, #6a6050 0%, #4a4538 100%); }
+  .cand-votes { font-size: 12px; color: var(--ink3); min-width: 85px; text-align: right; }
   .winner-tag {
     font-size: 10px;
-    background: var(--accent2);
+    background: var(--blue);
     color: #fff;
     padding: 1px 6px;
     border-radius: 3px;
@@ -160,7 +172,7 @@
   }
   .lose-tag {
     font-size: 10px;
-    background: var(--accent);
+    background: var(--red);
     color: #fff;
     padding: 1px 6px;
     border-radius: 3px;
@@ -176,8 +188,8 @@
     align-items: center;
     justify-content: space-between;
   }
-  .margin-win { background: rgba(74,144,217,0.12); border: 1px solid rgba(74,144,217,0.3); }
-  .margin-lose { background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.3); }
+  .margin-win { background: rgba(90,138,186,0.12); border: 1px solid rgba(90,138,186,0.3); }
+  .margin-lose { background: rgba(200,64,48,0.12); border: 1px solid rgba(200,64,48,0.3); }
 
   /* ── TURNOUT TABLE ── */
   .big-section { margin-bottom: 48px; }
@@ -193,10 +205,10 @@
   th {
     padding: 12px 14px;
     text-align: center;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 12px;
     letter-spacing: 1px;
-    color: var(--text-muted);
+    color: var(--ink3);
     font-weight: 400;
     border-bottom: 1px solid var(--border);
   }
@@ -205,16 +217,16 @@
     padding: 11px 14px;
     text-align: center;
     border-bottom: 1px solid var(--border);
-    color: var(--text);
+    color: var(--ink2);
   }
   td:first-child { text-align: left; font-weight: 700; color: #fff; }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: rgba(255,255,255,0.02); }
-  .heat-high { color: var(--accent); font-weight: 700; }
-  .heat-mid { color: var(--yellow); }
-  .heat-low { color: var(--text-muted); }
+  .heat-high { color: var(--red); font-weight: 700; }
+  .heat-mid { color: var(--gold2); }
+  .heat-low { color: var(--ink3); }
   .delta-pos { color: var(--green); font-size: 11px; }
-  .delta-neg { color: var(--accent); font-size: 11px; }
+  .delta-neg { color: var(--red); font-size: 11px; }
 
   /* ── INLINE BAR ── */
   .inline-bar-wrap { display: flex; align-items: center; gap: 8px; }
@@ -224,12 +236,12 @@
   .chart-container {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 24px;
     margin-bottom: 40px;
   }
   .chart-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 15px;
     font-weight: 600;
     color: #fff;
@@ -240,7 +252,7 @@
   /* ── AGE BAR CHART ── */
   .age-chart { display: flex; flex-direction: column; gap: 10px; }
   .age-row { display: grid; grid-template-columns: 60px 1fr 60px; align-items: center; gap: 10px; }
-  .age-label { font-size: 12px; color: var(--text-muted); text-align: right; }
+  .age-label { font-size: 12px; color: var(--ink3); text-align: right; }
   .age-bar-wrap { background: var(--border); border-radius: 4px; height: 28px; position: relative; overflow: hidden; }
   .age-bar-inner {
     position: absolute; left: 0; top: 0; height: 100%;
@@ -248,14 +260,14 @@
     display: flex; align-items: center; padding-left: 10px;
     font-size: 12px; font-weight: 700; color: #fff;
   }
-  .age-val { font-size: 12px; color: var(--text-muted); }
+  .age-val { font-size: 12px; color: var(--ink3); }
 
   /* ── INSIGHT CARDS ── */
   .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
   .insight-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 20px;
     position: relative;
     overflow: hidden;
@@ -266,34 +278,34 @@
     top: 0; left: 0;
     width: 4px; height: 100%;
   }
-  .insight-card.red::before { background: var(--accent); }
-  .insight-card.blue::before { background: var(--accent2); }
-  .insight-card.yellow::before { background: var(--yellow); }
+  .insight-card.red::before { background: var(--red); }
+  .insight-card.blue::before { background: var(--blue); }
+  .insight-card.yellow::before { background: var(--gold2); }
   .insight-card.green::before { background: var(--green); }
   .insight-num {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 8px;
   }
-  .insight-card.red .insight-num { color: var(--accent); }
-  .insight-card.blue .insight-num { color: var(--accent2); }
-  .insight-card.yellow .insight-num { color: var(--yellow); }
+  .insight-card.red .insight-num { color: var(--red); }
+  .insight-card.blue .insight-num { color: var(--blue); }
+  .insight-card.yellow .insight-num { color: var(--gold2); }
   .insight-card.green .insight-num { color: var(--green); }
   .insight-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
-  .insight-body { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  .insight-body { font-size: 12px; color: var(--ink3); line-height: 1.7; }
 
   /* ── STRATEGY BLOCK ── */
   .strategy-block {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 28px;
     margin-bottom: 24px;
   }
   .strategy-num {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Shippori Mincho', serif;
     font-size: 48px;
     font-weight: 700;
     color: var(--border);
@@ -301,10 +313,11 @@
     margin-bottom: 4px;
   }
   .strategy-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px; }
-  .strategy-body { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
-  .strategy-body strong { color: var(--text); }
+  .strategy-body { font-size: 13px; color: var(--ink3); line-height: 1.9; }
+  .strategy-body strong { color: var(--ink); }
   .strategy-tag {
     display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     padding: 3px 10px;
     border-radius: 12px;
@@ -312,33 +325,33 @@
     margin-top: 10px;
     margin-right: 6px;
   }
-  .tag-red { background: rgba(230,57,70,0.2); color: var(--accent); border: 1px solid rgba(230,57,70,0.4); }
-  .tag-blue { background: rgba(74,144,217,0.2); color: var(--accent2); border: 1px solid rgba(74,144,217,0.4); }
-  .tag-green { background: rgba(46,196,182,0.2); color: var(--green); border: 1px solid rgba(46,196,182,0.4); }
-  .tag-yellow { background: rgba(255,209,102,0.2); color: var(--yellow); border: 1px solid rgba(255,209,102,0.4); }
+  .tag-red { background: rgba(200,64,48,0.2); color: var(--red); border: 1px solid rgba(200,64,48,0.4); }
+  .tag-blue { background: rgba(90,138,186,0.2); color: var(--blue); border: 1px solid rgba(90,138,186,0.4); }
+  .tag-green { background: rgba(74,154,106,0.2); color: var(--green); border: 1px solid rgba(74,154,106,0.4); }
+  .tag-yellow { background: rgba(212,180,76,0.2); color: var(--gold2); border: 1px solid rgba(212,180,76,0.4); }
 
   /* ── DIVIDER ── */
   .divider { height: 1px; background: var(--border); margin: 40px 0; }
 
   /* ── FOOTNOTE ── */
-  .footnote { font-size: 11px; color: #55607a; margin-top: 12px; }
+  .footnote { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; color: var(--ink4); margin-top: 12px; }
 
   /* ── HIGHLIGHT BOX ── */
   .highlight-box {
-    background: linear-gradient(135deg, rgba(230,57,70,0.08) 0%, rgba(74,144,217,0.08) 100%);
+    background: linear-gradient(135deg, rgba(200,64,48,0.08) 0%, rgba(90,138,186,0.08) 100%);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 20px 24px;
     margin-bottom: 40px;
     font-size: 13px;
     line-height: 1.9;
   }
-  .highlight-box strong { color: var(--accent3); }
+  .highlight-box strong { color: var(--gold2); }
   .highlight-box .hl-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 14px;
     letter-spacing: 2px;
-    color: var(--text-muted);
+    color: var(--ink3);
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -379,16 +392,16 @@
   }
 </style>
 <style id="pw-gate-css">
-#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#0a0c14;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
+#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#12100e;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
 #pw-overlay .pw-box{text-align:center;max-width:380px;width:100%;padding:24px}
-#pw-overlay h2{color:#e8eaf0;font-size:1.4rem;margin-bottom:6px}
-#pw-overlay .pw-sub{color:#8890a8;font-size:13px;margin-bottom:28px}
-#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #252a3d;background:#111420;color:#e8eaf0;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
-#pw-overlay input:focus{border-color:#4a90d9}
-#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#e63946;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
-#pw-overlay button:hover{background:#c1121f}
-#pw-overlay .pw-err{color:#e63946;font-size:13px;margin-top:8px;display:none}
-#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#4a90d9;font-size:12px;text-decoration:none}
+#pw-overlay h2{color:#e8e0d4;font-size:1.4rem;margin-bottom:6px}
+#pw-overlay .pw-sub{color:#8a8070;font-size:13px;margin-bottom:28px}
+#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #3a352c;background:#1c1a16;color:#e8e0d4;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
+#pw-overlay input:focus{border-color:#5a8aba}
+#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#c84030;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
+#pw-overlay button:hover{background:#a03028}
+#pw-overlay .pw-err{color:#c84030;font-size:13px;margin-top:8px;display:none}
+#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#5a8aba;font-size:12px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -452,7 +465,7 @@
         </div>
         <div class="margin-box margin-lose">
           <span>オール沖縄（翁長）vs 自民（仲井眞）の票差</span>
-          <strong style="color:var(--accent2)">+99,744票</strong>
+          <strong style="color:var(--blue)">+99,744票</strong>
         </div>
         <p class="footnote">※喜納昌吉氏（民主・7,821票）も出馬。有効投票合計：699,164票</p>
       </div>
@@ -493,7 +506,7 @@
         </div>
         <div class="margin-box margin-lose">
           <span>玉城 vs 佐喜真（自公維）の票差</span>
-          <strong style="color:var(--accent2)">+80,174票</strong>
+          <strong style="color:var(--blue)">+80,174票</strong>
         </div>
         <p class="footnote">※他に兼島俊（3,638票）・渡口初美（3,482票）も出馬。過去最多得票（39.6万票）を記録</p>
       </div>
@@ -541,7 +554,7 @@
         </div>
         <div class="margin-box margin-lose">
           <span>玉城 vs 佐喜真の票差</span>
-          <strong style="color:var(--accent)">+64,988票</strong>
+          <strong style="color:var(--red)">+64,988票</strong>
         </div>
         <p class="footnote">統一教会問題が佐喜真陣営に打撃。票差は18年比で縮小</p>
       </div>
@@ -611,21 +624,21 @@
       <div class="chart-title">有権者数と投票参加者数の比較</div>
       <div style="display:flex; flex-direction:column; gap:20px;">
         <div>
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">2014年 ― 有権者109.8万人 ／ 投票70.6万人（64.1%）</div>
+          <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">2014年 ― 有権者109.8万人 ／ 投票70.6万人（64.1%）</div>
           <div style="background:var(--border); border-radius:4px; height:32px; overflow:hidden;">
-            <div style="width:64.1%; height:100%; background:linear-gradient(90deg, #4a90d9, #2563a0); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">64.1%</div>
+            <div style="width:64.1%; height:100%; background:linear-gradient(90deg, #5a8aba, #3a6a9a); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">64.1%</div>
           </div>
         </div>
         <div>
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">2018年 ― 有権者114.7万人 ／ 投票72.5万人（63.2%）</div>
+          <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">2018年 ― 有権者114.7万人 ／ 投票72.5万人（63.2%）</div>
           <div style="background:var(--border); border-radius:4px; height:32px; overflow:hidden;">
-            <div style="width:63.2%; height:100%; background:linear-gradient(90deg, #4a90d9, #2563a0); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">63.2%</div>
+            <div style="width:63.2%; height:100%; background:linear-gradient(90deg, #5a8aba, #3a6a9a); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">63.2%</div>
           </div>
         </div>
         <div>
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">2022年 ― 有権者116.6万人 ／ 投票67.5万人（57.9%）</div>
+          <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">2022年 ― 有権者116.6万人 ／ 投票67.5万人（57.9%）</div>
           <div style="background:var(--border); border-radius:4px; height:32px; overflow:hidden;">
-            <div style="width:57.9%; height:100%; background:linear-gradient(90deg, #e63946, #c1121f); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">57.9%</div>
+            <div style="width:57.9%; height:100%; background:linear-gradient(90deg, #c84030, #a03028); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">57.9%</div>
           </div>
         </div>
       </div>
@@ -658,7 +671,7 @@
             <td class="heat-low">47.27%</td>
             <td class="heat-low">47.55%</td>
             <td><span class="delta-pos">+0.28pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">選挙権付与（18歳）後ほぼ横ばい</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">選挙権付与（18歳）後ほぼ横ばい</td>
           </tr>
           <tr>
             <td>20代</td>
@@ -666,7 +679,7 @@
             <td class="heat-low">44.90%</td>
             <td class="heat-low">42.96%</td>
             <td><span class="delta-neg">▲4.44pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">3回連続で低下。最も低い年代帯</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">3回連続で低下。最も低い年代帯</td>
           </tr>
           <tr>
             <td>30代</td>
@@ -674,7 +687,7 @@
             <td class="heat-mid">57.29%</td>
             <td class="heat-mid">52.25%</td>
             <td><span class="delta-neg">▲5.53pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">急落。最も伸び代がある世代</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">急落。最も伸び代がある世代</td>
           </tr>
           <tr>
             <td>40代</td>
@@ -682,7 +695,7 @@
             <td class="heat-mid">65.50%</td>
             <td class="heat-mid">58.11%</td>
             <td><span class="delta-neg">▲8.30pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">3回で▲8.3ptの大幅下落★要注目</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">3回で▲8.3ptの大幅下落★要注目</td>
           </tr>
           <tr>
             <td>50代</td>
@@ -690,7 +703,7 @@
             <td class="heat-high">72.20%</td>
             <td class="heat-high">67.13%</td>
             <td><span class="delta-neg">▲5.64pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">高水準を維持。主要票田の一つ</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">高水準を維持。主要票田の一つ</td>
           </tr>
           <tr>
             <td>60代</td>
@@ -698,7 +711,7 @@
             <td class="heat-high">76.83%</td>
             <td class="heat-high">73.94%</td>
             <td><span class="delta-neg">▲3.76pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">最も投票率が高い現役世代</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">最も投票率が高い現役世代</td>
           </tr>
           <tr>
             <td>70代</td>
@@ -706,7 +719,7 @@
             <td class="heat-high">77.88%</td>
             <td class="heat-high">76.90%</td>
             <td><span class="delta-neg">▲1.24pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">最高投票率。安定したシニア層</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">最高投票率。安定したシニア層</td>
           </tr>
           <tr>
             <td>80代以上</td>
@@ -714,7 +727,7 @@
             <td class="heat-mid">51.88%</td>
             <td class="heat-mid">54.36%</td>
             <td><span class="delta-pos">+1.44pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">高齢だが期日前投票活用で安定</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">高齢だが期日前投票活用で安定</td>
           </tr>
         </tbody>
       </table>
@@ -729,42 +742,42 @@
         <div class="age-row">
           <div class="age-label">20代</div>
           <div class="age-bar-wrap">
-            <div class="age-bar-inner" style="width:42.96%; background:linear-gradient(90deg,#e63946,#c1121f);">42.96%</div>
+            <div class="age-bar-inner" style="width:42.96%; background:linear-gradient(90deg,#c84030,#a03028);">42.96%</div>
           </div>
           <div class="age-val">最低</div>
         </div>
         <div class="age-row">
           <div class="age-label">30代</div>
           <div class="age-bar-wrap">
-            <div class="age-bar-inner" style="width:52.25%; background:linear-gradient(90deg,#f4a261,#e07c4a);">52.25%</div>
+            <div class="age-bar-inner" style="width:52.25%; background:linear-gradient(90deg,#d4b44c,#b89830);">52.25%</div>
           </div>
           <div class="age-val">↓急落</div>
         </div>
         <div class="age-row">
           <div class="age-label">40代</div>
           <div class="age-bar-wrap">
-            <div class="age-bar-inner" style="width:58.11%; background:linear-gradient(90deg,#f4a261,#e07c4a);">58.11%</div>
+            <div class="age-bar-inner" style="width:58.11%; background:linear-gradient(90deg,#d4b44c,#b89830);">58.11%</div>
           </div>
           <div class="age-val">↓▲8pt</div>
         </div>
         <div class="age-row">
           <div class="age-label">50代</div>
           <div class="age-bar-wrap">
-            <div class="age-bar-inner" style="width:67.13%; background:linear-gradient(90deg,#4a90d9,#2563a0);">67.13%</div>
+            <div class="age-bar-inner" style="width:67.13%; background:linear-gradient(90deg,#5a8aba,#3a6a9a);">67.13%</div>
           </div>
           <div class="age-val"> </div>
         </div>
         <div class="age-row">
           <div class="age-label">60代</div>
           <div class="age-bar-wrap">
-            <div class="age-bar-inner" style="width:73.94%; background:linear-gradient(90deg,#2ec4b6,#1a9b93);">73.94%</div>
+            <div class="age-bar-inner" style="width:73.94%; background:linear-gradient(90deg,#4a9a6a,#3a7a5a);">73.94%</div>
           </div>
           <div class="age-val">高い</div>
         </div>
         <div class="age-row">
           <div class="age-label">70代</div>
           <div class="age-bar-wrap">
-            <div class="age-bar-inner" style="width:76.90%; background:linear-gradient(90deg,#2ec4b6,#1a9b93);">76.90%</div>
+            <div class="age-bar-inner" style="width:76.90%; background:linear-gradient(90deg,#4a9a6a,#3a7a5a);">76.90%</div>
           </div>
           <div class="age-val">最高</div>
         </div>
@@ -819,11 +832,11 @@
             <td style="text-align:left; font-size:12px;">最も固い玉城票</td>
           </tr>
           <tr>
-            <td style="font-weight:900; color:var(--yellow);">無党派層 ★</td>
-            <td style="color:var(--yellow);">〜50%</td>
-            <td class="heat-high" style="color:var(--yellow);">58〜60%</td>
-            <td class="heat-low" style="color:var(--accent);">〜28%</td>
-            <td style="text-align:left; font-size:12px; color:var(--yellow); font-weight:700;">最大票田！ここで大差がついた</td>
+            <td style="font-weight:900; color:var(--gold2);">無党派層 ★</td>
+            <td style="color:var(--gold2);">〜50%</td>
+            <td class="heat-high" style="color:var(--gold2);">58〜60%</td>
+            <td class="heat-low" style="color:var(--red);">〜28%</td>
+            <td style="text-align:left; font-size:12px; color:var(--gold2); font-weight:700;">最大票田！ここで大差がついた</td>
           </tr>
         </tbody>
       </table>
@@ -847,33 +860,33 @@
         <tbody>
           <tr>
             <td>10〜20代</td>
-            <td style="color:var(--accent);">佐喜真 優勢</td>
+            <td style="color:var(--red);">佐喜真 優勢</td>
             <td>経済・就職に関心高い。基地よりも生活重視</td>
             <td style="text-align:left; font-size:12px; color:var(--green);">→ 古謝（42歳）の世代イメージが刺さりやすい</td>
           </tr>
           <tr>
             <td>30代</td>
-            <td style="color:var(--accent);">佐喜真 優勢</td>
+            <td style="color:var(--red);">佐喜真 優勢</td>
             <td>子育て・教育・住宅ローン世代</td>
             <td style="text-align:left; font-size:12px; color:var(--green);">→ 生活政策で取り込み可能。投票率低下が課題</td>
           </tr>
           <tr>
             <td>40代</td>
-            <td style="color:var(--accent2);">玉城 優勢</td>
+            <td style="color:var(--blue);">玉城 優勢</td>
             <td>働き盛り。基地問題への関心も高い</td>
-            <td style="text-align:left; font-size:12px; color:var(--yellow);">→ 経済政策で一部を奪えるか。最重要攻略層</td>
+            <td style="text-align:left; font-size:12px; color:var(--gold2);">→ 経済政策で一部を奪えるか。最重要攻略層</td>
           </tr>
           <tr>
             <td>50〜60代</td>
-            <td style="color:var(--accent2);">玉城 優勢</td>
+            <td style="color:var(--blue);">玉城 優勢</td>
             <td>投票率高く、オール沖縄の組織票の中核</td>
-            <td style="text-align:left; font-size:12px; color:var(--accent);">→ 正面突破は難しい。一部切り崩しが目標</td>
+            <td style="text-align:left; font-size:12px; color:var(--red);">→ 正面突破は難しい。一部切り崩しが目標</td>
           </tr>
           <tr>
             <td>70代以上</td>
-            <td style="color:var(--accent2);">玉城 優勢</td>
+            <td style="color:var(--blue);">玉城 優勢</td>
             <td>最高投票率。革新系組織票が強固</td>
-            <td style="text-align:left; font-size:12px; color:var(--accent);">→ 過度な期待は禁物。現実的な確保に留める</td>
+            <td style="text-align:left; font-size:12px; color:var(--red);">→ 過度な期待は禁物。現実的な確保に留める</td>
           </tr>
         </tbody>
       </table>
@@ -921,19 +934,19 @@
           <tr>
             <td>維新・国民民主等</td>
             <td>約20,000票</td>
-            <td><span style="color:var(--yellow)">上積み可能</span></td>
+            <td><span style="color:var(--gold2)">上積み可能</span></td>
             <td style="text-align:left; font-size:12px;">「改革・中道」軸で吸収。衆院選での全勝を活かす</td>
           </tr>
           <tr>
-            <td style="color:var(--yellow); font-weight:900;">無党派層 ★★★</td>
-            <td style="color:var(--yellow);">約75,000票（28%）</td>
-            <td style="color:var(--yellow); font-weight:700;">最大の上積み余地<br>10万票超を狙う</td>
-            <td style="text-align:left; font-size:12px; color:var(--yellow);">経済・暮らし政策で「前向きな選択」訴求。SNS・若者戦略</td>
+            <td style="color:var(--gold2); font-weight:900;">無党派層 ★★★</td>
+            <td style="color:var(--gold2);">約75,000票（28%）</td>
+            <td style="color:var(--gold2); font-weight:700;">最大の上積み余地<br>10万票超を狙う</td>
+            <td style="text-align:left; font-size:12px; color:var(--gold2);">経済・暮らし政策で「前向きな選択」訴求。SNS・若者戦略</td>
           </tr>
           <tr>
             <td>下地票の吸収</td>
             <td>—（2022年下地票53,673）</td>
-            <td><span style="color:var(--accent2)">一部取り込み可能</span></td>
+            <td><span style="color:var(--blue)">一部取り込み可能</span></td>
             <td style="text-align:left; font-size:12px;">下地票の一部（中道・改革路線）を争奪</td>
           </tr>
           <tr>
@@ -961,38 +974,38 @@
           <tbody>
             <tr><td>2014年</td><td>392,786人</td><td>—</td></tr>
             <tr><td>2018年</td><td>421,507人</td><td><span class="delta-neg">+28,721人増</span></td></tr>
-            <tr><td>2022年</td><td><strong style="color:var(--accent)">490,391人</strong></td><td><span class="delta-neg">+68,884人増</span></td></tr>
+            <tr><td>2022年</td><td><strong style="color:var(--red)">490,391人</strong></td><td><span class="delta-neg">+68,884人増</span></td></tr>
           </tbody>
         </table>
 </div>
-        <p class="footnote" style="margin-top:10px">2022年の棄権者数は <strong style="color:var(--accent)">49万人</strong>。<br>玉城の得票（34万票）を大きく上回る。</p>
+        <p class="footnote" style="margin-top:10px">2022年の棄権者数は <strong style="color:var(--red)">49万人</strong>。<br>玉城の得票（34万票）を大きく上回る。</p>
       </div>
 
       <div class="chart-container" style="margin-bottom:0">
         <div class="chart-title">棄権者のプロファイル推計</div>
         <div style="display:flex; flex-direction:column; gap:10px; margin-top:4px;">
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">20代 棄権者（有権者の57%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">20代 棄権者（有権者の57%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
-              <div style="width:57%; height:100%; background:linear-gradient(90deg,#e63946,#c1121f); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">57%</div>
+              <div style="width:57%; height:100%; background:linear-gradient(90deg,#c84030,#a03028); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">57%</div>
             </div>
           </div>
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">30代 棄権者（有権者の47.75%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">30代 棄権者（有権者の47.75%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
-              <div style="width:47.75%; height:100%; background:linear-gradient(90deg,#f4a261,#e07c4a); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">47.75%</div>
+              <div style="width:47.75%; height:100%; background:linear-gradient(90deg,#d4b44c,#b89830); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">47.75%</div>
             </div>
           </div>
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">40代 棄権者（有権者の41.89%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">40代 棄権者（有権者の41.89%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
-              <div style="width:41.89%; height:100%; background:linear-gradient(90deg,#f4a261,#e07c4a); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">41.89%</div>
+              <div style="width:41.89%; height:100%; background:linear-gradient(90deg,#d4b44c,#b89830); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">41.89%</div>
             </div>
           </div>
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">60代 棄権者（有権者の26%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">60代 棄権者（有権者の26%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
-              <div style="width:26%; height:100%; background:linear-gradient(90deg,#4a90d9,#2563a0); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">26%</div>
+              <div style="width:26%; height:100%; background:linear-gradient(90deg,#5a8aba,#3a6a9a); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">26%</div>
             </div>
           </div>
         </div>

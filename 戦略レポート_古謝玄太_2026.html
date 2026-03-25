@@ -5,32 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>沖縄県知事選2026 戦略レポート｜古謝玄太</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{
-  --bg:#0d1117;
-  --bg2:#161b22;
-  --bg3:#21262d;
-  --border:#30363d;
-  --text:#e6edf3;
-  --text-sub:#8b949e;
-  --green:#2ea043;
-  --green-light:#3fb950;
-  --red:#f85149;
-  --blue:#58a6ff;
-  --orange:#d29922;
-  --purple:#bc8cff;
+  --bg:#12100e;
+  --surface:#1c1a16;
+  --surface2:#262420;
+  --border:#3a352c;
+  --border2:#4a4538;
+  --ink:#e8e0d4;
+  --ink2:#c4baa8;
+  --ink3:#8a8070;
+  --ink4:#6a6050;
+  --red:#c84030;
+  --red2:#e05040;
+  --blue:#5a8aba;
+  --blue2:#7aaad4;
+  --gold:#b89830;
+  --gold2:#d4b44c;
+  --green:#4a9a6a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.7;padding:20px}
-.container{max-width:1200px;margin:0 auto}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Serif JP','Shippori Mincho',serif;font-size:14px;line-height:1.9;padding:20px}
+.container{max-width:1080px;margin:0 auto;padding:48px 28px 80px}
 
 /* Header */
 .header{
-  background:linear-gradient(135deg,#1a2332 0%,#0d1117 50%,#1a1a2e 100%);
-  border:1px solid var(--border);
-  border-radius:16px;
+  background:var(--surface);
+  border-bottom:4px solid var(--gold);
+  border-radius:0;
   padding:48px 40px 36px;
   text-align:center;
   position:relative;
@@ -39,24 +43,23 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-seri
 }
 .header::before{
   content:'';position:absolute;top:0;left:0;right:0;bottom:0;
-  background:radial-gradient(ellipse at 30% 50%,rgba(88,166,255,0.1) 0%,transparent 60%),
-             radial-gradient(ellipse at 70% 50%,rgba(46,160,67,0.08) 0%,transparent 60%);
+  background:repeating-linear-gradient(135deg,transparent,transparent 10px,rgba(255,255,255,0.02) 10px,rgba(255,255,255,0.02) 20px);
 }
 .header-content{position:relative;z-index:1}
-.confidential-badge{display:inline-block;background:rgba(248,81,73,0.15);border:1px solid rgba(248,81,73,0.5);border-radius:6px;padding:4px 16px;font-size:12px;color:var(--red);letter-spacing:2px;margin-bottom:16px;font-weight:700}
-.header h1{font-size:2.4em;font-weight:900;margin-bottom:8px;letter-spacing:-0.5px}
-.header .subtitle{color:var(--blue);font-size:1.2em;font-weight:700;margin-bottom:8px}
-.header .date{color:var(--text-sub);font-size:0.85em}
+.confidential-badge{display:inline-block;background:rgba(200,64,48,0.15);border:1px solid rgba(200,64,48,0.4);border-radius:6px;padding:4px 16px;font-size:12px;color:var(--red2);letter-spacing:2px;margin-bottom:16px;font-weight:700;font-family:'Noto Sans JP',sans-serif}
+.header h1{font-family:'Shippori Mincho',serif;font-size:2.4em;font-weight:700;margin-bottom:8px;letter-spacing:2px}
+.header .subtitle{color:var(--gold2);font-size:1.2em;font-weight:700;margin-bottom:8px}
+.header .date{color:var(--ink3);font-size:0.85em}
 
 /* Section */
-.section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin-bottom:24px}
-.section-title{font-size:1.25em;font-weight:900;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.section{margin-bottom:64px;padding:28px 32px}
+.section-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--ink3);padding-bottom:12px}
 .section-icon{font-size:1.1em}
-.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px}
-.badge-green{background:rgba(46,160,67,0.2);color:var(--green-light);border:1px solid rgba(46,160,67,0.4)}
-.badge-red{background:rgba(248,81,73,0.2);color:var(--red);border:1px solid rgba(248,81,73,0.4)}
-.badge-blue{background:rgba(88,166,255,0.2);color:var(--blue);border:1px solid rgba(88,166,255,0.4)}
-.badge-orange{background:rgba(210,153,34,0.2);color:var(--orange);border:1px solid rgba(210,153,34,0.4)}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;font-family:'Noto Sans JP',sans-serif}
+.badge-green{background:rgba(74,154,106,0.2);color:var(--green);border:1px solid rgba(74,154,106,0.4)}
+.badge-red{background:rgba(200,64,48,0.2);color:var(--red);border:1px solid rgba(200,64,48,0.4)}
+.badge-blue{background:rgba(90,138,186,0.2);color:var(--blue);border:1px solid rgba(90,138,186,0.4)}
+.badge-orange{background:rgba(184,152,48,0.2);color:var(--gold);border:1px solid rgba(184,152,48,0.4)}
 
 /* Grid */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -64,22 +67,22 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-seri
 .grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px}
 
 /* Card */
-.card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:20px}
 .card-green{border-left:4px solid var(--green)}
 .card-red{border-left:4px solid var(--red)}
 .card-blue{border-left:4px solid var(--blue)}
-.card-orange{border-left:4px solid var(--orange)}
-.card-purple{border-left:4px solid var(--purple)}
-.card-label{font-size:11px;color:var(--text-sub);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.card-orange{border-left:4px solid var(--gold)}
+.card-purple{border-left:4px solid #8a6aaa}
+.card-label{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-family:'Noto Sans JP',sans-serif}
 .card-value{font-size:2em;font-weight:900;line-height:1.1}
-.card-note{font-size:12px;color:var(--text-sub);margin-top:4px}
+.card-note{font-size:12px;color:var(--ink3);margin-top:4px}
 
 /* Tables */
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{background:var(--bg3);color:var(--text-sub);font-weight:700;padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
-td{padding:10px 12px;border-bottom:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface);border:1px solid var(--border)}
+th{background:var(--surface2);color:var(--ink3);font-weight:700;padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
+td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--ink2)}
 tr:last-child td{border-bottom:none}
-tr:hover td{background:rgba(88,166,255,0.04)}
+tr:hover td{background:rgba(255,255,255,0.02)}
 
 /* Big score */
 .big-number{font-size:4em;font-weight:900;line-height:1}
@@ -88,81 +91,81 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 
 /* Timeline */
 .timeline{position:relative;padding-left:32px}
-.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--border2)}
 .tl-item{position:relative;margin-bottom:20px}
-.tl-dot{position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--blue);border:2px solid var(--bg2)}
-.tl-month{font-weight:700;color:var(--blue);font-size:14px;margin-bottom:4px}
-.tl-content{font-size:13px;color:var(--text-sub)}
+.tl-dot{position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--blue);border:2px solid var(--bg)}
+.tl-month{font-weight:700;color:var(--blue2);font-size:14px;margin-bottom:4px}
+.tl-content{font-size:13px;color:var(--ink3)}
 
 /* SWOT */
 .swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.swot-box{border-radius:10px;padding:20px}
-.swot-s{background:rgba(46,160,67,0.1);border:1px solid rgba(46,160,67,0.3)}
-.swot-w{background:rgba(248,81,73,0.1);border:1px solid rgba(248,81,73,0.3)}
-.swot-o{background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3)}
-.swot-t{background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.3)}
+.swot-box{border-radius:4px;padding:20px}
+.swot-s{background:rgba(74,154,106,0.1);border:1px solid rgba(74,154,106,0.3)}
+.swot-w{background:rgba(200,64,48,0.1);border:1px solid rgba(200,64,48,0.3)}
+.swot-o{background:rgba(90,138,186,0.1);border:1px solid rgba(90,138,186,0.3)}
+.swot-t{background:rgba(184,152,48,0.1);border:1px solid rgba(184,152,48,0.3)}
 .swot-title{font-weight:900;font-size:1em;margin-bottom:12px}
-.swot-s .swot-title{color:var(--green-light)}
-.swot-w .swot-title{color:var(--red)}
-.swot-o .swot-title{color:var(--blue)}
-.swot-t .swot-title{color:var(--orange)}
+.swot-s .swot-title{color:var(--green)}
+.swot-w .swot-title{color:var(--red2)}
+.swot-o .swot-title{color:var(--blue2)}
+.swot-t .swot-title{color:var(--gold2)}
 .swot-list{list-style:none;font-size:13px}
 .swot-list li{padding:3px 0;padding-left:14px;position:relative}
 .swot-list li::before{content:'▸';position:absolute;left:0;opacity:.7}
 
 /* Positioning Map */
-.pos-map{position:relative;background:var(--bg3);border:1px solid var(--border);border-radius:10px;height:380px;overflow:hidden}
-.pos-axis-h{position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(255,255,255,0.15)}
-.pos-axis-v{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.15)}
-.pos-label{position:absolute;font-size:11px;color:var(--text-sub);background:var(--bg3);padding:2px 8px;border-radius:4px}
+.pos-map{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:4px;height:380px;overflow:hidden}
+.pos-axis-h{position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(255,255,255,0.08)}
+.pos-axis-v{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.08)}
+.pos-label{position:absolute;font-size:11px;color:var(--ink3);background:var(--surface);padding:2px 8px;border-radius:4px}
 .pos-dot{position:absolute;transform:translate(-50%,-50%);text-align:center;cursor:default}
 .pos-dot-circle{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin:0 auto}
 .pos-dot-label{font-size:10px;margin-top:4px;font-weight:700;white-space:nowrap}
-.pos-dot-arrow{position:absolute;font-size:18px;color:var(--orange)}
+.pos-dot-arrow{position:absolute;font-size:18px;color:var(--gold)}
 
 /* Pillars */
 .pillar-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.pillar-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.pillar-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;text-align:center}
 .pillar-icon{font-size:2em;margin-bottom:8px}
-.pillar-name{font-weight:700;font-size:13px;color:var(--blue);margin-bottom:4px}
-.pillar-desc{font-size:11px;color:var(--text-sub)}
+.pillar-name{font-weight:700;font-size:13px;color:var(--blue);margin-bottom:4px;font-family:'Noto Sans JP',sans-serif}
+.pillar-desc{font-size:11px;color:var(--ink3)}
 
 /* Risk matrix */
 .risk-matrix{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:2px;font-size:12px}
-.rm-header{background:var(--bg3);padding:8px 10px;text-align:center;font-weight:700;border-radius:4px}
+.rm-header{background:var(--surface2);color:var(--ink3);padding:8px 10px;text-align:center;font-weight:700;border-radius:4px}
 .rm-cell{padding:8px 10px;border-radius:4px;font-size:11px}
-.rm-low{background:rgba(46,160,67,0.15)}
-.rm-mid{background:rgba(210,153,34,0.15)}
-.rm-high{background:rgba(248,81,73,0.2)}
-.rm-axis{background:var(--bg3);display:flex;align-items:center;justify-content:center;font-weight:700;padding:8px;border-radius:4px}
+.rm-low{background:rgba(74,154,106,0.12)}
+.rm-mid{background:rgba(184,152,48,0.12)}
+.rm-high{background:rgba(200,64,48,0.15)}
+.rm-axis{background:var(--surface2);color:var(--ink3);display:flex;align-items:center;justify-content:center;font-weight:700;padding:8px;border-radius:4px}
 
 /* Scenario cards */
 .scenario-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-.scenario-card{border-radius:10px;padding:20px}
-.scenario-win{background:rgba(46,160,67,0.12);border:1px solid rgba(46,160,67,0.35)}
-.scenario-lose{background:rgba(248,81,73,0.12);border:1px solid rgba(248,81,73,0.35)}
-.scenario-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:8px}
-.scenario-win .scenario-label{color:var(--green-light)}
+.scenario-card{border-radius:4px;padding:20px}
+.scenario-win{background:rgba(90,138,186,0.1);border:1px solid rgba(90,138,186,0.3)}
+.scenario-lose{background:rgba(200,64,48,0.1);border:1px solid rgba(200,64,48,0.3)}
+.scenario-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:8px;font-family:'Noto Sans JP',sans-serif}
+.scenario-win .scenario-label{color:var(--green)}
 .scenario-lose .scenario-label{color:var(--red)}
 .scenario-title{font-weight:900;font-size:1.05em;margin-bottom:8px}
 .scenario-prob{font-size:2em;font-weight:900;margin-bottom:8px}
-.scenario-win .scenario-prob{color:var(--green-light)}
+.scenario-win .scenario-prob{color:var(--green)}
 .scenario-lose .scenario-prob{color:var(--red)}
-.scenario-detail{font-size:12px;color:var(--text-sub)}
+.scenario-detail{font-size:12px;color:var(--ink3)}
 
 /* KPI table */
 .kpi-tbl td:nth-child(n+2){text-align:center}
-.kpi-tbl .on-track{color:var(--green-light)}
-.kpi-tbl .warning{color:var(--orange)}
+.kpi-tbl .on-track{color:var(--green)}
+.kpi-tbl .warning{color:var(--gold2)}
 
 /* NGword */
 .ngword-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.ng-chip{background:rgba(248,81,73,0.18);border:1px solid rgba(248,81,73,0.4);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--red);text-align:center}
+.ng-chip{background:rgba(200,64,48,0.12);border:1px solid rgba(200,64,48,0.3);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--red2);text-align:center}
 
 /* Mobile responsive */
 @media(max-width:768px){
   body{padding:12px}
-  .header{padding:28px 16px}
+  .header{padding:28px 20px 24px}
   .header h1{font-size:1.4rem}
   .section{padding:20px 16px}
   .grid-2,.grid-3,.grid-4{grid-template-columns:1fr 1fr}
@@ -172,11 +175,10 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   .ngword-grid{grid-template-columns:1fr 1fr}
   .score-wrap{justify-content:center}
   .pos-map{height:280px}
+  table{display:block;overflow-x:auto}
 }
 @media(max-width:480px){
-  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
-  .pillar-grid{grid-template-columns:1fr}
-  .ngword-grid{grid-template-columns:1fr 1fr}
+  .grid-2,.grid-3,.grid-4,.pillar-grid,.ngword-grid{grid-template-columns:1fr}
   .header h1{font-size:1.2rem}
 }
 </style>
@@ -214,7 +216,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div class="grid-4" style="margin-bottom:24px">
     <div class="card card-green">
       <div class="card-label">勝利確率</div>
-      <div class="card-value" style="color:var(--green-light)">83%</div>
+      <div class="card-value" style="color:var(--green)">83%</div>
       <div class="card-note">敗北確率 17%（+6pt 辺野古事故反映）</div>
     </div>
     <div class="card card-blue">
@@ -238,30 +240,30 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start">
     <div style="width:200px;flex-shrink:0">
       <canvas id="winChart" width="200" height="200"></canvas>
-      <div style="text-align:center;margin-top:8px;font-size:13px;color:var(--text-sub)">勝利確率 83%</div>
+      <div style="text-align:center;margin-top:8px;font-size:13px;color:var(--ink3)">勝利確率 83%</div>
     </div>
     <div style="flex:1;min-width:280px">
       <div style="font-weight:700;margin-bottom:12px;color:var(--blue)">戦略5原則</div>
       <div style="display:flex;flex-direction:column;gap:10px">
         <div class="card card-blue" style="padding:12px 16px">
           <span style="color:var(--blue);font-weight:700">① 争点の経済化</span><br>
-          <span style="font-size:13px;color:var(--text-sub)">辺野古を脇に置き「経済・生活・子育て」を主戦場とする</span>
+          <span style="font-size:13px;color:var(--ink3)">辺野古を脇に置き「経済・生活・子育て」を主戦場とする</span>
         </div>
         <div class="card card-green" style="padding:12px 16px">
-          <span style="color:var(--green-light);font-weight:700">② 無党派票50%獲得</span><br>
-          <span style="font-size:13px;color:var(--text-sub)">13万無党派票から6.5万を獲得。中部PFAS懸念層を重点攻略</span>
+          <span style="color:var(--green);font-weight:700">② 無党派票50%獲得</span><br>
+          <span style="font-size:13px;color:var(--ink3)">13万無党派票から6.5万を獲得。中部PFAS懸念層を重点攻略</span>
         </div>
         <div class="card card-blue" style="padding:12px 16px">
           <span style="color:var(--blue);font-weight:700">③ 下地票完全継承</span><br>
-          <span style="font-size:13px;color:var(--text-sub)">5.4万の下地支持層を最大限取り込み保守統一体制を構築</span>
+          <span style="font-size:13px;color:var(--ink3)">5.4万の下地支持層を最大限取り込み保守統一体制を構築</span>
         </div>
         <div class="card" style="padding:12px 16px">
-          <span style="color:var(--purple);font-weight:700">④ 期日前投票45%確保</span><br>
-          <span style="font-size:13px;color:var(--text-sub)">組織票を期日前に固め、終盤の風に左右されない構造を作る</span>
+          <span style="color:#8a6aaa;font-weight:700">④ 期日前投票45%確保</span><br>
+          <span style="font-size:13px;color:var(--ink3)">組織票を期日前に固め、終盤の風に左右されない構造を作る</span>
         </div>
         <div class="card card-orange" style="padding:12px 16px">
-          <span style="color:var(--orange);font-weight:700">⑤ 11市長連携による地域包囲網</span><br>
-          <span style="font-size:13px;color:var(--text-sub)">全11市の首長連名支持で「地域ぐるみ」の支持構造を演出</span>
+          <span style="color:var(--gold);font-weight:700">⑤ 11市長連携による地域包囲網</span><br>
+          <span style="font-size:13px;color:var(--ink3)">全11市の首長連名支持で「地域ぐるみ」の支持構造を演出</span>
         </div>
       </div>
     </div>
@@ -269,13 +271,13 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 </div>
 
 <!-- ===== SEC1.5: HENOKO BOAT ACCIDENT ===== -->
-<div class="section" style="border:1px solid rgba(248,81,73,0.5);background:linear-gradient(135deg,rgba(248,81,73,0.08),var(--bg2))">
+<div class="section" style="border:1px solid rgba(200,64,48,0.5);background:linear-gradient(135deg,rgba(200,64,48,0.08),var(--surface))">
   <div class="section-title"><span class="section-icon">🚨</span>緊急情勢変化：辺野古ボート転覆事故（2026年3月16日）</div>
   <div style="margin-bottom:20px">
     <div class="grid-2" style="margin-bottom:16px">
       <div class="card card-red" style="padding:16px">
         <div style="font-weight:700;font-size:14px;margin-bottom:10px;color:var(--red)">事故概要</div>
-        <ul style="font-size:13px;color:var(--text-sub);padding-left:16px;line-height:1.8">
+        <ul style="font-size:13px;color:var(--ink3);padding-left:16px;line-height:1.8">
           <li>3月16日午前10時頃、辺野古沖で抗議船2隻（「平和丸」「不屈」）が転覆</li>
           <li>平和学習で乗船していた同志社国際高校2年生18名と乗組員3名、計21名が海に転落</li>
           <li><strong style="color:var(--red)">死亡2名</strong>：武石知華さん（17歳・生徒）、金井創さん（71歳・船長）</li>
@@ -284,8 +286,8 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         </ul>
       </div>
       <div class="card card-green" style="padding:16px">
-        <div style="font-weight:700;font-size:14px;margin-bottom:10px;color:var(--green-light)">古謝陣営への影響（+6pt）</div>
-        <ul style="font-size:13px;color:var(--text-sub);padding-left:16px;line-height:1.8">
+        <div style="font-weight:700;font-size:14px;margin-bottom:10px;color:var(--green)">古謝陣営への影響（+6pt）</div>
+        <ul style="font-size:13px;color:var(--ink3);padding-left:16px;line-height:1.8">
           <li><strong>オール沖縄の信頼低下</strong>：ヘリ基地反対協議会の無登録運航・安全管理不備が発覚</li>
           <li><strong>辺野古トラップのリスク低下</strong>：玉城側が辺野古を争点化しにくくなった</li>
           <li><strong>論点シフト</strong>：「理念・感情」→「ガバナンス・安全管理」に移行、古謝の実務派イメージに追い風</li>
@@ -295,8 +297,8 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       </div>
     </div>
     <div class="card card-orange" style="padding:16px">
-      <div style="font-weight:700;font-size:14px;margin-bottom:10px;color:var(--orange)">⚠️ 陣営の対応方針（重要）</div>
-      <div style="font-size:13px;color:var(--text-sub);line-height:1.8">
+      <div style="font-weight:700;font-size:14px;margin-bottom:10px;color:var(--gold)">⚠️ 陣営の対応方針（重要）</div>
+      <div style="font-size:13px;color:var(--ink3);line-height:1.8">
         <strong>絶対に事故を直接的に政治利用しないこと。</strong>被害者は17歳の高校生。遺族・被害者への配慮を最優先する。<br>
         <strong>推奨スタンス：</strong>「大変痛ましい事故。二度と起きてはならない。安全管理体制の整備は行政の責任。」<br>
         <strong>戦術：</strong>事故への哀悼を示しつつ、「ガバナンス・安全管理・実務能力」を間接的に訴求する。相手陣営を名指しで批判せず、<br>
@@ -307,16 +309,16 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div style="display:flex;gap:16px;flex-wrap:wrap">
     <div class="card" style="flex:1;min-width:200px;padding:16px;text-align:center">
       <div class="card-label">旧勝率</div>
-      <div style="font-size:2em;font-weight:900;color:var(--text-sub)">77%</div>
+      <div style="font-size:2em;font-weight:900;color:var(--ink3)">77%</div>
     </div>
-    <div style="display:flex;align-items:center;font-size:2em;color:var(--green-light);font-weight:900">→</div>
+    <div style="display:flex;align-items:center;font-size:2em;color:var(--green);font-weight:900">→</div>
     <div class="card card-green" style="flex:1;min-width:200px;padding:16px;text-align:center">
       <div class="card-label">新勝率</div>
-      <div style="font-size:2em;font-weight:900;color:var(--green-light)">83%</div>
+      <div style="font-size:2em;font-weight:900;color:var(--green)">83%</div>
     </div>
     <div class="card" style="flex:1;min-width:200px;padding:16px;text-align:center">
       <div class="card-label">変動</div>
-      <div style="font-size:2em;font-weight:900;color:var(--green-light)">+6pt</div>
+      <div style="font-size:2em;font-weight:900;color:var(--green)">+6pt</div>
     </div>
   </div>
 </div>
@@ -329,26 +331,26 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="card card-blue" style="padding:24px">
       <div style="text-align:center;margin-bottom:16px">
         <div style="font-size:1.8em;font-weight:900;color:var(--blue)">古謝 玄太</div>
-        <div style="font-size:13px;color:var(--text-sub)">自民・公明・経済界 推薦候補</div>
+        <div style="font-size:13px;color:var(--ink3)">自民・公明・経済界 推薦候補</div>
       </div>
       <table style="font-size:13px">
-        <tr><td style="color:var(--text-sub);width:90px">年齢</td><td><strong>42歳</strong>（若さ・刷新感）</td></tr>
-        <tr><td style="color:var(--text-sub)">経歴</td><td>東大→総務省→那覇市副市長</td></tr>
-        <tr><td style="color:var(--text-sub)">スローガン</td><td><strong>「沖縄を、次のステージへ。」</strong></td></tr>
-        <tr><td style="color:var(--text-sub)">支持基盤</td><td>自民・公明・経済界・11市長</td></tr>
-        <tr><td style="color:var(--text-sub)">政策軸</td><td>経済成長・子育て・行政DX</td></tr>
-        <tr><td style="color:var(--text-sub)">辺野古</td><td>法的手続きを尊重・国と対話</td></tr>
+        <tr><td style="color:var(--ink3);width:90px">年齢</td><td><strong>42歳</strong>（若さ・刷新感）</td></tr>
+        <tr><td style="color:var(--ink3)">経歴</td><td>東大→総務省→那覇市副市長</td></tr>
+        <tr><td style="color:var(--ink3)">スローガン</td><td><strong>「沖縄を、次のステージへ。」</strong></td></tr>
+        <tr><td style="color:var(--ink3)">支持基盤</td><td>自民・公明・経済界・11市長</td></tr>
+        <tr><td style="color:var(--ink3)">政策軸</td><td>経済成長・子育て・行政DX</td></tr>
+        <tr><td style="color:var(--ink3)">辺野古</td><td>法的手続きを尊重・国と対話</td></tr>
       </table>
       <div style="margin-top:16px">
-        <div style="font-size:12px;font-weight:700;color:var(--green-light);margin-bottom:6px">強み</div>
-        <ul style="font-size:12px;color:var(--text-sub);padding-left:16px">
+        <div style="font-size:12px;font-weight:700;color:var(--green);margin-bottom:6px">強み</div>
+        <ul style="font-size:12px;color:var(--ink3);padding-left:16px">
           <li>42歳・世代交代感</li><li>行政実務能力・官僚経験</li>
           <li>11市長連名の組織力</li><li>経済界の資金・人脈</li>
         </ul>
       </div>
       <div style="margin-top:12px">
         <div style="font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px">弱み</div>
-        <ul style="font-size:12px;color:var(--text-sub);padding-left:16px">
+        <ul style="font-size:12px;color:var(--ink3);padding-left:16px">
           <li>知名度不足（出身：那覇以外）</li><li>「自民の傀儡」批判リスク</li>
           <li>辺野古の明確回答回避への批判</li>
         </ul>
@@ -358,26 +360,26 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="card card-red" style="padding:24px">
       <div style="text-align:center;margin-bottom:16px">
         <div style="font-size:1.8em;font-weight:900;color:var(--red)">玉城 デニー</div>
-        <div style="font-size:13px;color:var(--text-sub)">オール沖縄 推薦候補（現職）</div>
+        <div style="font-size:13px;color:var(--ink3)">オール沖縄 推薦候補（現職）</div>
       </div>
       <table style="font-size:13px">
-        <tr><td style="color:var(--text-sub);width:90px">年齢</td><td><strong>66歳</strong>（3期目への疲弊感）</td></tr>
-        <tr><td style="color:var(--text-sub)">経歴</td><td>タレント→衆議院4期→知事2期</td></tr>
-        <tr><td style="color:var(--text-sub)">スローガン</td><td><strong>「辺野古移設阻止」</strong></td></tr>
-        <tr><td style="color:var(--text-sub)">支持基盤</td><td>共産・社民・社大・立民・市民団体</td></tr>
-        <tr><td style="color:var(--text-sub)">政策軸</td><td>反基地・平和・オール沖縄</td></tr>
-        <tr><td style="color:var(--text-sub)">辺野古</td><td>絶対阻止（現在も法廷闘争中）</td></tr>
+        <tr><td style="color:var(--ink3);width:90px">年齢</td><td><strong>66歳</strong>（3期目への疲弊感）</td></tr>
+        <tr><td style="color:var(--ink3)">経歴</td><td>タレント→衆議院4期→知事2期</td></tr>
+        <tr><td style="color:var(--ink3)">スローガン</td><td><strong>「辺野古移設阻止」</strong></td></tr>
+        <tr><td style="color:var(--ink3)">支持基盤</td><td>共産・社民・社大・立民・市民団体</td></tr>
+        <tr><td style="color:var(--ink3)">政策軸</td><td>反基地・平和・オール沖縄</td></tr>
+        <tr><td style="color:var(--ink3)">辺野古</td><td>絶対阻止（現在も法廷闘争中）</td></tr>
       </table>
       <div style="margin-top:16px">
-        <div style="font-size:12px;font-weight:700;color:var(--green-light);margin-bottom:6px">強み</div>
-        <ul style="font-size:12px;color:var(--text-sub);padding-left:16px">
+        <div style="font-size:12px;font-weight:700;color:var(--green);margin-bottom:6px">強み</div>
+        <ul style="font-size:12px;color:var(--ink3);padding-left:16px">
           <li>現職の知名度・実績PR</li><li>オール沖縄の組織票36万基盤</li>
           <li>平和・感情票の動員力</li>
         </ul>
       </div>
       <div style="margin-top:12px">
         <div style="font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px">弱み</div>
-        <ul style="font-size:12px;color:var(--text-sub);padding-left:16px">
+        <ul style="font-size:12px;color:var(--ink3);padding-left:16px">
           <li>8年間の経済政策不振</li><li>辺野古阻止の事実上の敗北感</li>
           <li>3期目への「変化なし」批判</li><li>66歳という世代感</li>
           <li>辺野古ボート事故で支持母体の安全管理問題が露呈</li>
@@ -464,26 +466,26 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="pos-label" style="bottom:6px;left:50%;transform:translateX(-50%)">↓ 経済・生活</div>
     <!-- 玉城 -->
     <div class="pos-dot" style="left:72%;top:25%">
-      <div class="pos-dot-circle" style="background:rgba(248,81,73,0.3);border:2px solid var(--red);color:var(--red)">玉城</div>
+      <div class="pos-dot-circle" style="background:rgba(200,64,48,0.3);border:2px solid var(--red);color:var(--red)">玉城</div>
       <div class="pos-dot-label" style="color:var(--red)">理念 × 基地反対</div>
     </div>
     <!-- 古謝・現在 -->
     <div class="pos-dot" style="left:36%;top:62%">
-      <div class="pos-dot-circle" style="background:rgba(88,166,255,0.2);border:2px solid var(--blue);color:var(--blue)">古謝<br><span style="font-size:9px">現在</span></div>
+      <div class="pos-dot-circle" style="background:rgba(90,138,186,0.2);border:2px solid var(--blue);color:var(--blue)">古謝<br><span style="font-size:9px">現在</span></div>
       <div class="pos-dot-label" style="color:var(--blue)">経済 × やや容認</div>
     </div>
     <!-- 古謝・目標 -->
     <div class="pos-dot" style="left:46%;top:72%">
-      <div class="pos-dot-circle" style="background:rgba(46,160,67,0.25);border:2px dashed var(--green-light);color:var(--green-light);font-size:10px">古謝<br><span style="font-size:9px">目標</span></div>
-      <div class="pos-dot-label" style="color:var(--green-light)">経済 × 中立</div>
+      <div class="pos-dot-circle" style="background:rgba(74,154,106,0.25);border:2px dashed var(--green);color:var(--green);font-size:10px">古謝<br><span style="font-size:9px">目標</span></div>
+      <div class="pos-dot-label" style="color:var(--green)">経済 × 中立</div>
     </div>
     <!-- 無党派層 -->
     <div class="pos-dot" style="left:52%;top:60%">
-      <div class="pos-dot-circle" style="background:rgba(210,153,34,0.2);border:2px solid var(--orange);color:var(--orange);font-size:10px">無党<br>派層</div>
-      <div class="pos-dot-label" style="color:var(--orange)">争奪ゾーン</div>
+      <div class="pos-dot-circle" style="background:rgba(184,152,48,0.2);border:2px solid var(--gold);color:var(--gold);font-size:10px">無党<br>派層</div>
+      <div class="pos-dot-label" style="color:var(--gold)">争奪ゾーン</div>
     </div>
   </div>
-  <div style="margin-top:12px;font-size:12px;color:var(--text-sub);text-align:center">
+  <div style="margin-top:12px;font-size:12px;color:var(--ink3);text-align:center">
     ● 目標は「経済・生活」象限の中央に位置取り、無党派層との距離を最小化すること
   </div>
 </div>
@@ -513,9 +515,9 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <tbody>
           <tr><td>那覇市</td><td>約24万</td><td><span style="color:var(--blue)">48%</span></td></tr>
           <tr><td>中部（沖縄・うるま）</td><td>約32万</td><td><span style="color:var(--blue)">46%</span></td></tr>
-          <tr><td>北部（名護・本部）</td><td>約10万</td><td><span style="color:var(--orange)">44%</span></td></tr>
+          <tr><td>北部（名護・本部）</td><td>約10万</td><td><span style="color:var(--gold)">44%</span></td></tr>
           <tr><td>南部（豊見城・糸満）</td><td>約18万</td><td><span style="color:var(--blue)">52%</span></td></tr>
-          <tr><td>離島（宮古・石垣）</td><td>約6万</td><td><span style="color:var(--green-light)">55%</span></td></tr>
+          <tr><td>離島（宮古・石垣）</td><td>約6万</td><td><span style="color:var(--green)">55%</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -529,46 +531,46 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="card card-blue" style="padding:16px">
       <div class="badge badge-blue" style="margin-bottom:8px">優先度1</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">30〜40代 経済重視無党派</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--blue)">8〜10万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">子育て・物価・賃金に敏感。SNSで意思決定する層。「稼ぐ沖縄」「子育て無償化」メッセージが刺さる。YouTube・Instagram重点投資。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">推定票数: <strong style="color:var(--blue)">8〜10万票</strong></div>
+      <div style="font-size:12px;color:var(--ink3)">子育て・物価・賃金に敏感。SNSで意思決定する層。「稼ぐ沖縄」「子育て無償化」メッセージが刺さる。YouTube・Instagram重点投資。</div>
     </div>
     <div class="card card-green" style="padding:16px">
       <div class="badge badge-green" style="margin-bottom:8px">優先度2</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">中部 PFAS懸念層</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--green-light)">5〜7万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">うるま・沖縄市周辺。水道水汚染への怒り。玉城県政の対応不足を突き、「きれいな水を守る」政策で保革横断的に獲得可能。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">推定票数: <strong style="color:var(--green)">5〜7万票</strong></div>
+      <div style="font-size:12px;color:var(--ink3)">うるま・沖縄市周辺。水道水汚染への怒り。玉城県政の対応不足を突き、「きれいな水を守る」政策で保革横断的に獲得可能。</div>
     </div>
     <div class="card card-orange" style="padding:16px">
       <div class="badge badge-orange" style="margin-bottom:8px">優先度3</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">下地支持層</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--orange)">5〜5.4万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">下地幹郎グループの引き継ぎ票（2022年得票53,673票）。宮古島・石垣を中心に分布。保守統一の象徴として早期に確認演説・連携行動で固める。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">推定票数: <strong style="color:var(--gold)">5〜5.4万票</strong></div>
+      <div style="font-size:12px;color:var(--ink3)">下地幹郎グループの引き継ぎ票（2022年得票53,673票）。宮古島・石垣を中心に分布。保守統一の象徴として早期に確認演説・連携行動で固める。</div>
     </div>
     <div class="card" style="padding:16px">
-      <div class="badge" style="margin-bottom:8px;background:rgba(188,140,255,0.2);color:var(--purple);border:1px solid rgba(188,140,255,0.4)">優先度4</div>
+      <div class="badge" style="margin-bottom:8px;background:rgba(138,106,170,0.2);color:#8a6aaa;border:1px solid rgba(138,106,170,0.4)">優先度4</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">50〜60代 保革混在層</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--purple)">15〜18万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">最大ボリューム層。経済・安定を重視するが平和感情も持つ。ミニ集会・後援会活動・地元紙広告・ラジオで地道に浸透。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">推定票数: <strong style="color:#8a6aaa">15〜18万票</strong></div>
+      <div style="font-size:12px;color:var(--ink3)">最大ボリューム層。経済・安定を重視するが平和感情も持つ。ミニ集会・後援会活動・地元紙広告・ラジオで地道に浸透。</div>
     </div>
     <div class="card" style="padding:16px">
-      <div class="badge" style="margin-bottom:8px;background:rgba(88,166,255,0.15);color:var(--blue);border:1px solid rgba(88,166,255,0.3)">優先度5</div>
+      <div class="badge" style="margin-bottom:8px;background:rgba(90,138,186,0.15);color:var(--blue);border:1px solid rgba(90,138,186,0.3)">優先度5</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">10〜20代 若年層</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--blue)">4〜5万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">同世代感覚・TikTok・Instagramが主要接触媒体。学費・就職・将来不安に共鳴する短尺動画コンテンツを集中投下。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">推定票数: <strong style="color:var(--blue)">4〜5万票</strong></div>
+      <div style="font-size:12px;color:var(--ink3)">同世代感覚・TikTok・Instagramが主要接触媒体。学費・就職・将来不安に共鳴する短尺動画コンテンツを集中投下。</div>
     </div>
     <div class="card" style="padding:16px">
-      <div class="badge" style="margin-bottom:8px;background:rgba(46,160,67,0.15);color:var(--green-light);border:1px solid rgba(46,160,67,0.3)">優先度6</div>
+      <div class="badge" style="margin-bottom:8px;background:rgba(74,154,106,0.15);color:var(--green);border:1px solid rgba(74,154,106,0.3)">優先度6</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">経済界（+波及効果）</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">直接票: <strong style="color:var(--green-light)">3〜4万票</strong>｜波及: 10万票</div>
-      <div style="font-size:12px;color:var(--text-sub)">商工会・観光業・建設業・IT企業。本人票に加え、従業員・家族への影響力が大。政策協定・共同記者会見で可視化。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">直接票: <strong style="color:var(--green)">3〜4万票</strong>｜波及: 10万票</div>
+      <div style="font-size:12px;color:var(--ink3)">商工会・観光業・建設業・IT企業。本人票に加え、従業員・家族への影響力が大。政策協定・共同記者会見で可視化。</div>
     </div>
   </div>
   <div style="margin-top:16px">
     <div class="card card-green" style="padding:16px">
       <div class="badge badge-green" style="margin-bottom:8px">優先度7</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">離島住民（宮古島・石垣島・久米島等）</div>
-      <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--green-light)">6〜7万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">交通インフラ・医療・経済格差が最大関心事。自衛隊配備問題も複雑。「離島振興パッケージ」を前面に出し、現地入り複数回で密度の高い接触を実現。</div>
+      <div style="font-size:12px;color:var(--ink3);margin-bottom:8px">推定票数: <strong style="color:var(--green)">6〜7万票</strong></div>
+      <div style="font-size:12px;color:var(--ink3)">交通インフラ・医療・経済格差が最大関心事。自衛隊配備問題も複雑。「離島振興パッケージ」を前面に出し、現地入り複数回で密度の高い接触を実現。</div>
     </div>
   </div>
 </div>
@@ -577,10 +579,10 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 <div class="section">
   <div class="section-title"><span class="section-icon">📢</span>メッセージ戦略</div>
   <!-- Core message -->
-  <div style="background:linear-gradient(135deg,rgba(88,166,255,0.15),rgba(46,160,67,0.1));border:1px solid rgba(88,166,255,0.3);border-radius:12px;padding:28px;text-align:center;margin-bottom:24px">
-    <div style="font-size:11px;letter-spacing:2px;color:var(--text-sub);margin-bottom:8px">コアメッセージ</div>
+  <div style="background:linear-gradient(135deg,rgba(90,138,186,0.15),rgba(74,154,106,0.1));border:1px solid rgba(90,138,186,0.3);border-radius:4px;padding:28px;text-align:center;margin-bottom:24px">
+    <div style="font-size:11px;letter-spacing:2px;color:var(--ink3);margin-bottom:8px">コアメッセージ</div>
     <div style="font-size:2em;font-weight:900;color:var(--blue);line-height:1.3;margin-bottom:8px">「沖縄を、次のステージへ。」</div>
-    <div style="font-size:1.1em;color:var(--text-sub)">経済を回し、子どもを育て、自然を守る。未来の沖縄を、若い力で切り拓く。</div>
+    <div style="font-size:1.1em;color:var(--ink3)">経済を回し、子どもを育て、自然を守る。未来の沖縄を、若い力で切り拓く。</div>
   </div>
 
   <!-- 5 pillars -->
@@ -620,36 +622,36 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div style="display:flex;flex-direction:column;gap:10px">
         <div class="card card-red" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">🏢 ワシントン事務所問題</div>
-          <div style="font-size:12px;color:var(--text-sub)">「8年間で何が変わりましたか？ワシントン事務所に多額の税金を使い、辺野古は1ミリも止まっていない」</div>
+          <div style="font-size:12px;color:var(--ink3)">「8年間で何が変わりましたか？ワシントン事務所に多額の税金を使い、辺野古は1ミリも止まっていない」</div>
         </div>
         <div class="card card-red" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">⛏️ 辺野古の現実</div>
-          <div style="font-size:12px;color:var(--text-sub)">「辺野古移設は最高裁でも認められた。『絶対阻止』という約束は守られなかった。県民を8年間騙し続けてきた」</div>
+          <div style="font-size:12px;color:var(--ink3)">「辺野古移設は最高裁でも認められた。『絶対阻止』という約束は守られなかった。県民を8年間騙し続けてきた」</div>
         </div>
         <div class="card card-red" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">⚓ 辺野古ボート事故と安全管理</div>
-          <div style="font-size:12px;color:var(--text-sub)">「反基地運動の船が無登録で高校生を乗せ、2名の命が失われた。理念のために安全を軽視する姿勢こそ、8年間の県政の本質ではないか」<br><strong style="color:var(--orange)">※直接攻撃は控え、「ガバナンスの欠如」として間接的に示唆する。被害者への配慮を最優先。</strong></div>
+          <div style="font-size:12px;color:var(--ink3)">「反基地運動の船が無登録で高校生を乗せ、2名の命が失われた。理念のために安全を軽視する姿勢こそ、8年間の県政の本質ではないか」<br><strong style="color:var(--gold)">※直接攻撃は控え、「ガバナンスの欠如」として間接的に示唆する。被害者への配慮を最優先。</strong></div>
         </div>
         <div class="card card-red" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">📉 経済停滞</div>
-          <div style="font-size:12px;color:var(--text-sub)">「沖縄の平均年収は全国最下位のまま。8年間、何をしていたのか。生活を政争の道具にしないでください」</div>
+          <div style="font-size:12px;color:var(--ink3)">「沖縄の平均年収は全国最下位のまま。8年間、何をしていたのか。生活を政争の道具にしないでください」</div>
         </div>
       </div>
     </div>
     <div>
-      <div style="font-weight:700;margin-bottom:12px;font-size:14px;color:var(--green-light)">防御メッセージ（攻撃への返し）</div>
+      <div style="font-weight:700;margin-bottom:12px;font-size:14px;color:var(--green)">防御メッセージ（攻撃への返し）</div>
       <div style="display:flex;flex-direction:column;gap:10px">
         <div class="card card-green" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q: 辺野古はどうするのか？</div>
-          <div style="font-size:12px;color:var(--text-sub)">「法的手続きを尊重しながら、国・米国と粘り強く対話を続けます。県民の声を聞き、現実的な解決を探ります。争うより、稼ぐ沖縄を作ります」</div>
+          <div style="font-size:12px;color:var(--ink3)">「法的手続きを尊重しながら、国・米国と粘り強く対話を続けます。県民の声を聞き、現実的な解決を探ります。争うより、稼ぐ沖縄を作ります」</div>
         </div>
         <div class="card card-green" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q: 自民の傀儡では？</div>
-          <div style="font-size:12px;color:var(--text-sub)">「沖縄のために戦う知事になります。国にものを言える知事こそ、対話で動かせる。私は沖縄県民の代表です」</div>
+          <div style="font-size:12px;color:var(--ink3)">「沖縄のために戦う知事になります。国にものを言える知事こそ、対話で動かせる。私は沖縄県民の代表です」</div>
         </div>
         <div class="card card-green" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Q: 若すぎて頼りない？</div>
-          <div style="font-size:12px;color:var(--text-sub)">「42歳、現役世代の当事者です。子育て・住宅・仕事の悩みは私自身の課題。東大・総務省・副市長の実務経験で即戦力として動きます」</div>
+          <div style="font-size:12px;color:var(--ink3)">「42歳、現役世代の当事者です。子育て・住宅・仕事の悩みは私自身の課題。東大・総務省・副市長の実務経験で即戦力として動きます」</div>
         </div>
       </div>
     </div>
@@ -697,7 +699,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       </div>
     </div>
     <div class="tl-item">
-      <div class="tl-dot" style="background:var(--orange)"></div>
+      <div class="tl-dot" style="background:var(--gold)"></div>
       <div class="tl-month">2026年7月 ｜ フェーズ4：決戦準備</div>
       <div class="tl-content">
         ミニ集会86回完了（全市町村カバー）／
@@ -707,7 +709,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       </div>
     </div>
     <div class="tl-item">
-      <div class="tl-dot" style="background:var(--orange)"></div>
+      <div class="tl-dot" style="background:var(--gold)"></div>
       <div class="tl-month">2026年8月 ｜ フェーズ5：追い込み</div>
       <div class="tl-content">
         告示前大規模集会（最終総決起・10,000人目標）／
@@ -741,12 +743,12 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     </div>
     <div class="card card-green" style="text-align:center;padding:20px">
       <div class="card-label">ボランティア</div>
-      <div class="card-value" style="color:var(--green-light)">6,700</div>
+      <div class="card-value" style="color:var(--green)">6,700</div>
       <div class="card-note">全市町村に分散配置</div>
     </div>
     <div class="card card-orange" style="text-align:center;padding:20px">
       <div class="card-label">推薦団体</div>
-      <div class="card-value" style="color:var(--orange)">150</div>
+      <div class="card-value" style="color:var(--gold)">150</div>
       <div class="card-note">経済・業界・地域団体</div>
     </div>
   </div>
@@ -772,7 +774,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div class="grid-2">
     <div class="card" style="padding:16px">
       <div style="font-weight:700;margin-bottom:10px;font-size:13px">期日前投票計画</div>
-      <ul style="font-size:13px;color:var(--text-sub);padding-left:16px">
+      <ul style="font-size:13px;color:var(--ink3);padding-left:16px">
         <li>全投票の<strong style="color:var(--blue)">45%</strong>を期日前に確保（≒全体の組織票）</li>
         <li>後援会員への早期投票奨励ハガキ（告示翌日発送）</li>
         <li>期日前投票所への送迎・同行ボランティア配置</li>
@@ -781,7 +783,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     </div>
     <div class="card" style="padding:16px">
       <div style="font-weight:700;margin-bottom:10px;font-size:13px">集会計画</div>
-      <ul style="font-size:13px;color:var(--text-sub);padding-left:16px">
+      <ul style="font-size:13px;color:var(--ink3);padding-left:16px">
         <li>大規模集会 <strong style="color:var(--blue)">4回</strong>（計20,000人動員目標）</li>
         <li>ミニ集会 <strong style="color:var(--blue)">86回</strong>（全市町村）</li>
         <li>子育て・PFAS・経済など課題別タウンホール</li>
@@ -820,15 +822,15 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div style="display:flex;flex-direction:column;gap:10px">
         <div class="card card-blue" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Ver.A「未来」</div>
-          <div style="font-size:12px;color:var(--text-sub)">青空背景・笑顔・「次のステージへ」。刷新感・希望を全面に。若年・無党派向け。</div>
+          <div style="font-size:12px;color:var(--ink3)">青空背景・笑顔・「次のステージへ」。刷新感・希望を全面に。若年・無党派向け。</div>
         </div>
         <div class="card card-green" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Ver.B「家族」</div>
-          <div style="font-size:12px;color:var(--text-sub)">子どもと寄り添う映像・「育てやすい沖縄」。子育て世代・30〜40代向け。</div>
+          <div style="font-size:12px;color:var(--ink3)">子どもと寄り添う映像・「育てやすい沖縄」。子育て世代・30〜40代向け。</div>
         </div>
         <div class="card card-orange" style="padding:12px 16px">
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Ver.C「実績」</div>
-          <div style="font-size:12px;color:var(--text-sub)">副市長時代の実績グラフ・「経験と信頼」。50〜60代保守層・経済界向け。</div>
+          <div style="font-size:12px;color:var(--ink3)">副市長時代の実績グラフ・「経験と信頼」。50〜60代保守層・経済界向け。</div>
         </div>
       </div>
     </div>
@@ -928,7 +930,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div class="grid-2">
     <div class="card" style="padding:16px">
       <div style="font-weight:700;margin-bottom:10px;font-size:13px">週次レビュー設計</div>
-      <ul style="font-size:13px;color:var(--text-sub);padding-left:16px">
+      <ul style="font-size:13px;color:var(--ink3);padding-left:16px">
         <li>毎週月曜 09:00｜選対幹部会（30分）</li>
         <li>SNS指標・後援会件数・メディア露出を確認</li>
         <li>前週の集会・イベント振り返り</li>
@@ -938,7 +940,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     </div>
     <div class="card" style="padding:16px">
       <div style="font-weight:700;margin-bottom:10px;font-size:13px">意思決定フロー</div>
-      <div style="font-size:13px;color:var(--text-sub)">
+      <div style="font-size:13px;color:var(--ink3)">
         <div style="margin-bottom:6px">① 現場報告 → 選対幹部 → 候補者</div>
         <div style="margin-bottom:6px">② 緊急案件は24時間以内に候補者判断</div>
         <div style="margin-bottom:6px">③ メディア対応：広報責任者が一元管理</div>
@@ -953,7 +955,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 <div class="section">
   <div class="section-title"><span class="section-icon">🔮</span>勝利・敗北シナリオ</div>
 
-  <div style="font-weight:700;margin-bottom:14px;font-size:14px;color:var(--green-light)">✅ 勝利シナリオ（合計83%）</div>
+  <div style="font-weight:700;margin-bottom:14px;font-size:14px;color:var(--green)">✅ 勝利シナリオ（合計83%）</div>
   <div class="scenario-grid" style="margin-bottom:24px">
     <div class="scenario-card scenario-win">
       <div class="scenario-label">SCENARIO A</div>
@@ -962,7 +964,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="scenario-detail">
         辺野古ボート事故で反基地側が守勢に。争点を「経済・子育て・PFAS」に集中させ、無党派票7万を獲得。<br>
         <strong>得票: 古謝35.5万 vs 玉城32万</strong><br>
-        <span style="font-size:11px;color:var(--green-light)">▲+5pt（事故による辺野古争点化リスク低下を反映）</span>
+        <span style="font-size:11px;color:var(--green)">▲+5pt（事故による辺野古争点化リスク低下を反映）</span>
       </div>
     </div>
     <div class="scenario-card scenario-win">
@@ -972,7 +974,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="scenario-detail">
         反基地陣営の士気低下で投票率低下（55%）、保守固定票が高率投票。<br>
         <strong>得票: 古謝37万 vs 玉城29万</strong><br>
-        <span style="font-size:11px;color:var(--green-light)">▲+2pt（オール沖縄の動員力低下を反映）</span>
+        <span style="font-size:11px;color:var(--green)">▲+2pt（オール沖縄の動員力低下を反映）</span>
       </div>
     </div>
     <div class="scenario-card scenario-win">
@@ -982,7 +984,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="scenario-detail">
         投票率58%・拮抗するが組織票と期日前で逃げ切り。<br>
         <strong>得票: 古謝33万 vs 玉城32万</strong><br>
-        <span style="font-size:11px;color:var(--text-sub)">▼-1pt（A/Bに吸収）</span>
+        <span style="font-size:11px;color:var(--ink3)">▼-1pt（A/Bに吸収）</span>
       </div>
     </div>
   </div>
@@ -996,7 +998,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="scenario-detail">
         討論で辺野古への答弁が炎上、無党派が離反。<br>
         <strong>得票: 古謝31.5万 vs 玉城37万</strong><br>
-        <span style="font-size:11px;color:var(--green-light)">▼-4pt（ボート事故で玉城側が辺野古を攻めにくくなった）</span>
+        <span style="font-size:11px;color:var(--green)">▼-4pt（ボート事故で玉城側が辺野古を攻めにくくなった）</span>
       </div>
     </div>
     <div class="scenario-card scenario-lose">
@@ -1006,7 +1008,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="scenario-detail">
         全国的な自民・高市政権逆風が沖縄に波及。無党派が反自民票に。<br>
         <strong>得票: 古謝30万 vs 玉城35万</strong><br>
-        <span style="font-size:11px;color:var(--text-sub)">→ 変化なし（独立要因）</span>
+        <span style="font-size:11px;color:var(--ink3)">→ 変化なし（独立要因）</span>
       </div>
     </div>
     <div class="scenario-card scenario-lose">
@@ -1016,7 +1018,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="scenario-detail">
         認知率が上がらず、オール沖縄の動員力に負ける。<br>
         <strong>得票: 古謝31万 vs 玉城34万</strong><br>
-        <span style="font-size:11px;color:var(--green-light)">▼-2pt（事故報道でガバナンス議論増加、間接的に認知向上）</span>
+        <span style="font-size:11px;color:var(--green)">▼-2pt（事故報道でガバナンス議論増加、間接的に認知向上）</span>
       </div>
     </div>
   </div>
@@ -1025,17 +1027,17 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div style="display:flex;gap:16px;flex-wrap:wrap">
     <div class="card card-green" style="flex:1;min-width:200px;padding:24px;text-align:center">
       <div class="card-label">勝利確率</div>
-      <div style="font-size:3.5em;font-weight:900;color:var(--green-light)">83%</div>
-      <div style="font-size:13px;color:var(--text-sub)">A:50% + B:17% + C:16%</div>
+      <div style="font-size:3.5em;font-weight:900;color:var(--green)">83%</div>
+      <div style="font-size:13px;color:var(--ink3)">A:50% + B:17% + C:16%</div>
     </div>
     <div class="card card-red" style="flex:1;min-width:200px;padding:24px;text-align:center">
       <div class="card-label">敗北確率</div>
       <div style="font-size:3.5em;font-weight:900;color:var(--red)">17%</div>
-      <div style="font-size:13px;color:var(--text-sub)">X:6% + Y:5% + Z:6%</div>
+      <div style="font-size:13px;color:var(--ink3)">X:6% + Y:5% + Z:6%</div>
     </div>
     <div class="card" style="flex:2;min-width:280px;padding:20px">
       <div style="font-weight:700;margin-bottom:10px;font-size:14px">勝利確率を高める最重要アクション</div>
-      <ul style="font-size:13px;color:var(--text-sub);padding-left:16px">
+      <ul style="font-size:13px;color:var(--ink3);padding-left:16px">
         <li>辺野古ワナを徹底回避（討論トレーニング30回）</li>
         <li>無党派票6.5万獲得（中部PFAS・子育て集中）</li>
         <li>投票率を58%以下に誘導（期日前組織票固定）</li>
@@ -1046,9 +1048,9 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 </div>
 
 <!-- ===== FOOTER ===== -->
-<div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px 32px;margin-top:8px;text-align:center">
+<div style="background:var(--surface);border-top:2px solid var(--border);padding:24px 32px;margin-top:8px;text-align:center">
   <div style="color:var(--red);font-weight:700;font-size:13px;margin-bottom:8px">🔒 本書は内部機密文書です。取り扱いには最大限の注意を払ってください。</div>
-  <div style="font-size:12px;color:var(--text-sub)">
+  <div style="font-size:12px;color:var(--ink3)">
     作成: AI分析チーム ｜ 作成日: 2026年3月18日 ｜ 最終更新: 2026年3月21日 ｜ 改訂予定: 月次戦略会議にて<br>
     無断転載・外部共有・SNS投稿を固く禁じます。
   </div>
@@ -1064,8 +1066,8 @@ new Chart(document.getElementById('winChart'),{
     labels:['勝利 83%','敗北 17%'],
     datasets:[{
       data:[83,17],
-      backgroundColor:['rgba(46,160,67,0.85)','rgba(248,81,73,0.7)'],
-      borderColor:['#2ea043','#f85149'],
+      backgroundColor:['rgba(74,154,106,0.85)','rgba(200,64,48,0.7)'],
+      borderColor:['#4a9a6a','#c84030'],
       borderWidth:2,
       hoverOffset:6
     }]
@@ -1076,7 +1078,7 @@ new Chart(document.getElementById('winChart'),{
     plugins:{
       legend:{
         position:'bottom',
-        labels:{color:'#8b949e',font:{size:12},padding:10}
+        labels:{color:'#8a8070',font:{size:12},padding:10}
       }
     }
   }
@@ -1091,16 +1093,16 @@ new Chart(document.getElementById('voteScenarioChart'),{
       {
         label:'古謝玄太（万票）',
         data:[33.5,34.5,35.5],
-        backgroundColor:'rgba(88,166,255,0.75)',
-        borderColor:'#58a6ff',
+        backgroundColor:'rgba(90,138,186,0.7)',
+        borderColor:'#5a8aba',
         borderWidth:1.5,
         borderRadius:4
       },
       {
         label:'玉城デニー（万票）',
         data:[31.0,33.5,37.0],
-        backgroundColor:'rgba(248,81,73,0.6)',
-        borderColor:'#f85149',
+        backgroundColor:'rgba(200,64,48,0.7)',
+        borderColor:'#c84030',
         borderWidth:1.5,
         borderRadius:4
       }
@@ -1109,14 +1111,14 @@ new Chart(document.getElementById('voteScenarioChart'),{
   options:{
     responsive:true,
     plugins:{
-      legend:{labels:{color:'#8b949e',font:{size:11}}},
+      legend:{labels:{color:'#8a8070',font:{size:11}}},
       tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.parsed.y+'万票'}}}
     },
     scales:{
-      x:{ticks:{color:'#8b949e'},grid:{color:'rgba(48,54,61,0.5)'}},
+      x:{ticks:{color:'#8a8070'},grid:{color:'rgba(74,69,56,0.5)'}},
       y:{
-        ticks:{color:'#8b949e',callback:function(v){return v+'万'}},
-        grid:{color:'rgba(48,54,61,0.5)'},
+        ticks:{color:'#8a8070',callback:function(v){return v+'万'}},
+        grid:{color:'rgba(74,69,56,0.5)'},
         min:28,
         max:40
       }
@@ -1132,15 +1134,15 @@ new Chart(document.getElementById('adBudgetChart'),{
     datasets:[{
       data:[40,18,15,12,8,5,2],
       backgroundColor:[
-        'rgba(88,166,255,0.8)',
-        'rgba(46,160,67,0.8)',
-        'rgba(210,153,34,0.8)',
-        'rgba(188,140,255,0.8)',
-        'rgba(248,81,73,0.7)',
-        'rgba(139,148,158,0.7)',
+        'rgba(90,138,186,0.8)',
+        'rgba(74,154,106,0.8)',
+        'rgba(184,152,48,0.8)',
+        'rgba(138,106,170,0.8)',
+        'rgba(200,64,48,0.7)',
+        'rgba(138,128,112,0.7)',
         'rgba(255,255,255,0.3)'
       ],
-      borderColor:'#0d1117',
+      borderColor:'#1c1a16',
       borderWidth:2,
       hoverOffset:8
     }]
@@ -1151,7 +1153,7 @@ new Chart(document.getElementById('adBudgetChart'),{
     plugins:{
       legend:{
         position:'right',
-        labels:{color:'#8b949e',font:{size:10},padding:8,boxWidth:12}
+        labels:{color:'#8a8070',font:{size:10},padding:8,boxWidth:12}
       }
     }
   }

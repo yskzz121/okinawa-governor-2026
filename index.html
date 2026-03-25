@@ -4,22 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>沖縄県知事選2026 調査資料</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0c14;
-    --surface: #111420;
-    --border: #252a3d;
-    --accent: #e63946;
-    --accent2: #4a90d9;
-    --text: #e8eaf0;
-    --text-muted: #8890a8;
+    --bg: #12100e;
+    --surface: #1c1a16;
+    --surface2: #262420;
+    --border: #3a352c;
+    --border2: #4a4538;
+    --ink: #e8e0d4;
+    --ink2: #c4baa8;
+    --ink3: #8a8070;
+    --ink4: #6a6050;
+    --red: #c84030;
+    --red2: #e05040;
+    --blue: #5a8aba;
+    --blue2: #7aaad4;
+    --gold: #b89830;
+    --gold2: #d4b44c;
+    --green: #4a9a6a;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     background: var(--bg);
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink);
+    font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,37 +44,39 @@
     width: 100%;
   }
   #pw-gate h1 {
+    font-family: 'Shippori Mincho', serif;
     font-size: 1.6rem;
     font-weight: 700;
+    color: var(--ink);
     margin-bottom: 8px;
   }
   #pw-gate .sub {
-    color: var(--text-muted);
+    color: var(--ink3);
     font-size: 13px;
     margin-bottom: 32px;
   }
   #pw-gate input[type="password"] {
     width: 100%;
     padding: 14px 18px;
-    border-radius: 8px;
+    border-radius: 4px;
     border: 1px solid var(--border);
     background: var(--surface);
-    color: var(--text);
+    color: var(--ink);
     font-size: 16px;
     font-family: 'Noto Sans JP', sans-serif;
     outline: none;
     transition: border-color .2s;
   }
   #pw-gate input[type="password"]:focus {
-    border-color: var(--accent2);
+    border-color: var(--gold);
   }
   #pw-gate button {
     width: 100%;
     margin-top: 12px;
     padding: 14px;
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
-    background: var(--accent);
+    background: var(--red);
     color: #fff;
     font-size: 15px;
     font-weight: 700;
@@ -73,9 +84,9 @@
     cursor: pointer;
     transition: background .2s;
   }
-  #pw-gate button:hover { background: #c1121f; }
+  #pw-gate button:hover { background: var(--red2); }
   #pw-gate .error {
-    color: var(--accent);
+    color: var(--red2);
     font-size: 13px;
     margin-top: 10px;
     display: none;
@@ -91,51 +102,70 @@
     text-align: center;
     margin-bottom: 40px;
   }
+  .confidential-badge {
+    display: inline-block;
+    background: rgba(200,64,48,0.15);
+    border: 1px solid rgba(200,64,48,0.4);
+    color: var(--red2);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 3px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
   .portal-header h1 {
+    font-family: 'Shippori Mincho', serif;
     font-size: 1.8rem;
-    font-weight: 900;
+    font-weight: 700;
+    color: var(--ink);
     margin-bottom: 4px;
   }
-  .portal-header h1 span { color: var(--accent); }
+  .portal-header h1 span { color: var(--gold2); }
   .portal-header .sub {
-    color: var(--text-muted);
+    color: var(--ink3);
     font-size: 13px;
   }
   .report-card {
     display: block;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px 28px;
-    margin-bottom: 16px;
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-bottom: 14px;
     text-decoration: none;
-    color: var(--text);
+    color: var(--ink);
     transition: border-color .2s, transform .15s;
   }
   .report-card:hover {
-    border-color: var(--accent2);
+    border-color: var(--gold);
     transform: translateY(-2px);
   }
   .report-card .tag {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--accent);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold2);
     text-transform: uppercase;
     margin-bottom: 6px;
   }
   .report-card .title {
+    font-family: 'Shippori Mincho', serif;
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 6px;
+    color: var(--ink);
   }
   .report-card .desc {
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 13px;
-    color: var(--text-muted);
+    color: var(--ink3);
     line-height: 1.7;
   }
   .footer {
     text-align: center;
-    color: var(--text-muted);
+    color: var(--ink4);
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     margin-top: 40px;
   }
@@ -157,6 +187,7 @@
 <!-- Portal Content -->
 <div id="portal">
   <div class="portal-header">
+    <div class="confidential-badge">🔒 内部機密 / CONFIDENTIAL</div>
     <h1>沖縄県知事選<span>2026</span></h1>
     <div class="sub">古謝玄太 陣営 調査・戦略資料</div>
   </div>
