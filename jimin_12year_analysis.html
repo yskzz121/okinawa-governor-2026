@@ -241,8 +241,8 @@ tr:hover td{background:rgba(0,0,0,0.015)}
         <td>参院選</td>
         <td><strong style="color:var(--green)">糸数慶子 ●</strong></td>
         <td style="color:var(--ink3)">安里政晃</td>
-        <td style="color:var(--red)">▲約7万票</td>
-        <td>50.01%</td>
+        <td style="color:var(--red)">▲約3.3万票</td>
+        <td>53.43%</td>
       </tr>
       <tr>
         <td>2</td>
@@ -277,8 +277,8 @@ tr:hover td{background:rgba(0,0,0,0.015)}
         <td>参院選</td>
         <td><strong style="color:var(--green)">高良鉄美 ●</strong></td>
         <td style="color:var(--ink3)">安里繁信</td>
-        <td style="color:var(--red)">▲約7万票</td>
-        <td>46.41%</td>
+        <td style="color:var(--red)">▲約6.4万票</td>
+        <td>49.00%</td>
       </tr>
       <tr>
         <td>6</td>
@@ -287,7 +287,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
         <td><strong style="color:var(--green)">玉城デニー ●</strong><br><span style="font-size:11px;color:var(--ink3)">339,767票</span></td>
         <td style="color:var(--ink3)">佐喜真淳<br><span style="font-size:11px">274,844票</span></td>
         <td style="color:var(--red);font-weight:700">▲64,923票</td>
-        <td>57.22%</td>
+        <td>57.92%</td>
       </tr>
       <tr>
         <td>7</td>
@@ -296,7 +296,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
         <td><strong style="color:var(--green)">伊波洋一 ●</strong></td>
         <td style="color:var(--ink3)">古謝玄太</td>
         <td style="color:var(--red)">▲約2,900票</td>
-        <td>52.47%</td>
+        <td>50.57%</td>
       </tr>
       <tr>
         <td>8</td>
@@ -305,7 +305,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
         <td><strong style="color:var(--green)">高良沙哉 ●</strong></td>
         <td style="color:var(--ink3)">奥間亮</td>
         <td style="color:var(--red)">▲約3.3万票</td>
-        <td>51.2%</td>
+        <td>56.75%</td>
       </tr>
     </tbody>
   </table>
@@ -547,7 +547,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
   <div class="grid-2" style="margin-bottom:16px">
     <div class="card card-orange">
       <div class="card-label">2018年 かりゆしグループ脱退</div>
-      <div class="cause-desc">「革新色が強くなりすぎた」「知事がしがらみで政治的リーダーシップを発揮できていない」と批判して脱退。</div>
+      <div class="cause-desc">県民投票の実施方針を巡る相違と政党色の強まりへの不満を理由に脱退。</div>
     </div>
     <div class="card card-orange">
       <div class="card-label">2021年 金秀グループ離脱</div>
@@ -771,8 +771,8 @@ tr:hover td{background:rgba(0,0,0,0.015)}
           <div class="card-note">復帰直後の15%から大幅低下</div>
         </div>
         <div class="card card-green">
-          <div class="card-label">観光収入（2019年）</div>
-          <div class="card-value" style="color:var(--green);font-size:1.6em">7,340億円</div>
+          <div class="card-label">観光収入（2019年度）</div>
+          <div class="card-value" style="color:var(--green);font-size:1.6em">7,047億円</div>
           <div class="card-note">入域観光客1,016万人（史上初1千万超）</div>
         </div>
         <div class="card card-red">
@@ -795,7 +795,7 @@ tr:hover td{background:rgba(0,0,0,0.015)}
       <li>基地依存度は5%まで低下。「基地がなくなると経済が困る」論は破綻している。</li>
       <li>那覇新都心（返還跡地）は年間税収199億円。<strong>返還後の方が経済的に豊か</strong>という実証データがある。</li>
       <li>県民所得・貧困率は全国ワースト。<strong>「暮らしの改善」は最も共感を得やすい争点。</strong></li>
-      <li>観光7,340億円 vs 基地関連1,000億円。数字で見れば経済の主役は観光であり、基地ではない。</li>
+      <li>観光7,047億円 vs 基地関連約2,700億円。数字で見れば経済の主役は観光であり、基地ではない。</li>
     </ul>
   </div>
 </div>
@@ -939,7 +939,7 @@ new Chart(document.getElementById('budgetChart'),{
     labels:['2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
     datasets:[{
       label:'沖縄振興予算（億円）',
-      data:[2937, 3001, 3501, 3340, 3350, 3150, 3010, 3010, 3010, 3010, 2998, 2979, 2956, 2941, 2930],
+      data:[2937, 3001, 3501, 3340, 3350, 3150, 3010, 3010, 3010, 3010, 2998, 2684, 2678, 2642, 2647],
       borderColor:'#1a4a8a',
       backgroundColor:'rgba(26,74,138,0.08)',
       fill:true,
@@ -973,7 +973,7 @@ new Chart(document.getElementById('budgetChart'),{
       y:{
         ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},
         grid:{color:'rgba(192,184,168,0.4)'},
-        min:2700,
+        min:2400,
         max:3600
       }
     }
@@ -1025,7 +1025,7 @@ new Chart(document.getElementById('turnoutChart'),{
     labels:['2014年','2018年','2022年'],
     datasets:[{
       label:'知事選 投票率',
-      data:[64.13, 63.24, 57.22],
+      data:[64.13, 63.24, 57.92],
       borderColor:'#9a7a28',
       backgroundColor:'rgba(154,122,40,0.08)',
       fill:true,
@@ -1095,9 +1095,9 @@ new Chart(document.getElementById('proportionalChart'),{
 new Chart(document.getElementById('econChart'),{
   type:'bar',
   data:{
-    labels:['基地関連収入','観光収入（2019年）'],
+    labels:['基地関連収入（2019年度）','観光収入（2018年度）'],
     datasets:[{
-      data:[1000, 7340],
+      data:[2712, 7047],
       backgroundColor:['rgba(26,74,138,0.7)','rgba(26,107,74,0.7)'],
       borderColor:['#1a4a8a','#1a6b4a'],
       borderWidth:1.5,
